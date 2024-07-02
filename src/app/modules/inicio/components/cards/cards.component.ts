@@ -5,19 +5,39 @@ import { Usuario } from 'src/app/models/usuario';
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css']
 })
-export class CardsComponent {
+export class CardsComponent {  
   public info: Usuario [] ;
 constructor(){
 this.info = [
   {
     id:"",
-    nombre:"Victoria",
-    edad:20,
-    imagen:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUCIDwmmKo_iyHPRGR3guUfuEYaF13oXwiAQ&s",
-    alt:"Estudiante del colegio secundario cet 30",
-    email:"victorialescanoarco@gmail.com",
-    password:"2987423"
+    nombre:" Base de Maquillaje Maybelline",
+    tono:"30H",
+    imagen:"./assets/imagenes/base.jpg",
+    alt:"Alta cobertura",
+    precio: 9.800
+  
   },
+  {
+    id:"",
+    nombre:"Labial Avon",
+    tono:"Velvet",
+    imagen:"./assets/imagenes/labial.jpg",
+    alt:"Labial cremoso",
+    precio: 14.000
+  
+  },
+
+  {
+    id:"",
+    nombre:"Polvo Fenty Beauty",
+    tono:"30H",
+    imagen:"./assets/imagenes/polvo1.jpg",
+    alt:"Alta cobertura",
+    precio: 8.900
+  
+  },
+ 
   
 ]
 

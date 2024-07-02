@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { Usuario } from 'src/app/models/usuario';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -8,12 +9,4 @@ import { AuthService } from '../../services/auth.service';
 export class RegistroComponent {
   hide = true ;
 
-  async registrar(){
-    const credenciales = {
-        email: this.usuarios.email,
-        password : this.usuarios.password
-    }
-    const res = await  
-  }
- 
 }
