@@ -1,8 +1,8 @@
 export interface Usuario {
-    id: string | any ;
+    uid: string | any ;
     nombre: string ;
-    tono: string ;
-    imagen: string;
-    alt: string;
-    precio:number;
+    password: string;
+    email: string,
+    rol: string,
+    apellido: string
 }

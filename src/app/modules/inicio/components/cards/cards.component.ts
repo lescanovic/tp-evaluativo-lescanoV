@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Producto } from 'src/app/models/producto';
 import { Usuario } from 'src/app/models/usuario';
 @Component({
   selector: 'app-cards',
@@ -6,35 +7,35 @@ import { Usuario } from 'src/app/models/usuario';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent {  
-  public info: Usuario [] ;
+  public info: Producto [] ;
 constructor(){
 this.info = [
   {
-    id:"",
+    uid:"",
     nombre:" Base de Maquillaje Maybelline",
     tono:"30H",
     imagen:"./assets/imagenes/base.jpg",
     alt:"Alta cobertura",
-    precio: 9.800
+    precio: 9800
   
   },
   {
-    id:"",
+    uid:"",
     nombre:"Labial Avon",
     tono:"Velvet",
     imagen:"./assets/imagenes/labial.jpg",
     alt:"Labial cremoso",
-    precio: 14.000
+    precio: 14000
   
   },
 
   {
-    id:"",
+    uid:"",
     nombre:"Polvo Fenty Beauty",
     tono:"30H",
     imagen:"./assets/imagenes/polvo1.jpg",
     alt:"Alta cobertura",
-    precio: 8.900
+    precio: 8900
   
   },
  

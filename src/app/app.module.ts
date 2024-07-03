@@ -8,6 +8,7 @@ import { FooterComponent } from './modules/shared/components/footer/footer.compo
 import { NavbarComponent } from './modules/shared/components/navbar/navbar.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
