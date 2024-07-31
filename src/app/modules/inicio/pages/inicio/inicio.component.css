@@ -1,18 +1,29 @@
 .container{
-    align-items: center;
-  margin-left: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
 }
 h1{
     margin-top: 20px;
     text-align: center;
 }
-.carousel-item{
-    justify-content: center;
 
-}
 .img-carrusel{
-width: 1550px;
+width: 1400px;
+height: 600px;
+
 
 }
+#carrusel{
+ 
+    overflow: hidden;
+  
+}
 
-
+.carousel-inner {
+    width: 100%;
+  }
+.contenedor{
+    scale: 0,3;
+}
