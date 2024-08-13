@@ -4,5 +4,6 @@ export interface Producto {
     imagen: string;
     alt: string;
     precio:number;
-    nombre:string
+    nombre:string;
+
 }

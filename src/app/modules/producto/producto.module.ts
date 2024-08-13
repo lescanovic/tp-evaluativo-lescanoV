@@ -5,6 +5,8 @@ import { ProductoRoutingModule } from './producto-routing.module';
 import { LabialesComponent } from './pages/labiales/labiales.component';
 import { RuboresComponent } from './pages/rubores/rubores.component';
 
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { RuboresComponent } from './pages/rubores/rubores.component';
   ],
   imports: [
     CommonModule,
-    ProductoRoutingModule
+    ProductoRoutingModule,
+    MatCardModule,
+    MatButtonModule
   ]
 })
 export class ProductoModule { }
