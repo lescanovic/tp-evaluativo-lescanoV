@@ -2,43 +2,57 @@ import { Injectable } from '@angular/core';
 //Servicio en la nube de autentificacion de FireBase
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
+
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  //Referenciar Auth de FireBase al servicio
-
-  constructor(public auth:AngularFireAuth) { }
-
-  //Funcion de registro
-registrar(email:string,password:string){
-return this.auth.createUserWithEmailAndPassword(email,password)
+ 
+  //Referenciar Auth de firebase en el servicio y servicioFirestore:
+constructor(
+  private auth: AngularFireAuth,
+  private servicioFirestore: AngularFirestore
+){}
+ // FUNCIÓN PARA REGISTRO
+ registrar(email: string, password: string){
+  // retorna el valor que es creado con el método "createEmail..."
+  return this.auth.createUserWithEmailAndPassword(email, password);
+}
+// FUNCIÓN PARA INICIO DE SESIÓN
+iniciarSesion(email: string, password: string){
+  // validar la información del usuario -> saber si existe en la colección
+  return this.auth.signInWithEmailAndPassword(email, password);
 }
 
-  //Funcion para inicio de sesion
-  InicioSesion(email:string,password:string){
-    return this.auth.signInWithEmailAndPassword(email,password)
+ // FUNCIÓN PARA CERRAR SESIÓN
+ cerrarSesion(){
+  // devuelve una promesa vacía -> quita token
+  return this.auth.signOut();
+}
+ // FUNCIÓN PARA TOMAR EL UID
+ async obtenerUid(){
+  // Nos va a generar una promesa y la constante la va a capturar
+  const user = await this.auth.currentUser;
 
+  /*
+    Si el usuario no respeta la estructura de la interfaz /
+    Si tuvo problemas para el registro -> ej.: mal internet
+  */
+  if(user == null){
+    return null;
+  } else {
+    return user.uid;
   }
-  //Funcion para cerrar sesion
-CerrarSesion(){
-  //Devuelve una promesa vacia -> quita token
-  return this.auth.signOut()
 }
 
-
-  //Funcion para tomar el UID
-
-  async ObtenerUid(){
-    //nos va a generar una promesa y la constante la va a capturar
-    const user =await this.auth.currentUser
-
-    //Si el usuario no respeta la estructura de la interfaz/
-    //Si tuvo problemas para el registro -> ej:mal internet
-    if (user==null) {
-      return null
-    } else {
-      return user.uid
-    }
-  }
+obtenerUsuario(email: string){
+  /**
+   * Retornamos del servicioFirestore la colección de 'usuarios', buscamos una referencia en los email registrados
+   * y los comparamos con los que ingrese el usuario al iniciar sesión, y lo obtiene con el '.get()'
+   * Lo vuelve una promesa => da un resultado RESUELTO o RECHAZADO
+   */
+  return this.servicioFirestore.collection('usuarios', ref => ref.where('email', '==', email)).get().toPromise();
 }
+}
+

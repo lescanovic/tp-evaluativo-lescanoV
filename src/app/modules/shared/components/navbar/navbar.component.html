@@ -1,31 +1,48 @@
-<nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
-   
-    <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/inicio"><img src="./assets/imagenes/logo.jpg" id="img"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a id="Inicio" class="nav-link" active aria-current="page" routerLink="/inicio">Inicio</a>
-                </li>
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" id="menuSecciones" [matMenuTriggerFor]="seccion">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #seccion="matMenu">
+      <button mat-menu-item routerLink="/inicio">Inicio</button>
+      <button mat-menu-item [matMenuTriggerFor]="producto">Productos</button>
+    </mat-menu>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Productos
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="/labiales">Labiales</a></li>
-                        <li><a class="dropdown-item" routerLink="/rubores">Rubores</a></li>
+    <span>My App</span>
+    <!-- Boton para la vista del inicio --> 
+     <button id="menuInicio" mat-button routerLink="/inicio">Inicio</button>
+    <!-- Menu desplegable ->Productos -->
+    <button id="menuProducto" mat-button [matMenuTriggerFor]="producto">Productos</button>
+    <mat-menu #producto="matMenu">
+        <button mat-menu-item routerLink="/labiales">Labiales</button>
+        <button mat-menu-item [matMenuTriggerFor]="Rostro">Rostro</button>
+      
+    </mat-menu>
+    <mat-menu #Rostro>
+        <button mat-menu-item routerLink="/">Rubores</button>
+        <button mat-menu-item routerLink="/">Bases</button>
+        <button mat-menu-item routerLink="/">Corrector</button>
+        <button mat-menu-item routerLink="/">Polvo compacto</button>
+        <button mat-menu-item routerLink="/">Contorno</button>
+        <button mat-menu-item routerLink="/">Iluminador</button>
+    </mat-menu>
+    <span class="example-spacer"></span>
+  <!--Menu desplegable para manejar los accesos de la pagina-->
 
-                    </ul>
-                </li>
+    <button mat-button [matMenuTriggerFor]="usuario" ><mat-icon>person</mat-icon></button>
+    <mat-menu #usuario="matMenu">
+        <button mat-menu-item (click)="ingresar()" *ngIf="logueado"  routerLink="/registro">Registrarse</button>
+        <button mat-menu-item (click)="ingresar()" *ngIf="logueado"  routerLink="/inicio-sesion">Iniciar Sesion</button>
+        <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado" >Cerrar Sesion</button>
 
-            </ul>
+    </mat-menu>
 
-        </div>
-    </div>
-</nav>
+   <!-- carrito -->
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+
+     <!--Label para modo oscuro-->
+  <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
+
+  <input type="checkbox" id="toggle" (click)="cambiarFondo()">
+  </mat-toolbar>
