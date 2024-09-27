@@ -41,68 +41,68 @@ export class LabialesComponent {
     {
       uid:"",
       nombre:"Labial Paradise",
-      tono:"107",
+      tono:"Latte Mocca",
       imagen:"./assets/imagenes/labial4.jpeg",
-      alt:"Balsamo",
-      precio: 25000
+      alt:"Labial Mate con acabado luminoso",
+      precio: 15000
     
     },
     {
       uid:"",
       nombre:"Labial Paradise",
-      tono:"107",
+      tono:"Live Red",
       imagen:"./assets/imagenes/labial5.jpg",
-      alt:"Balsamo",
-      precio: 25000
+      alt:"Labial Mate con acabado luminoso",
+      precio: 15000
     
     },
     
     {
       uid:"",
       nombre:"Labial Paradise",
-      tono:"107",
+      tono:"Skin",
       imagen:"./assets/imagenes/labial6.jpg",
-      alt:"Balsamo",
-      precio: 25000
+      alt:"Labial mate con acabado luminoso",
+      precio: 15000
     
     },
     
     {
       uid:"",
       nombre:"Labial Paradise",
-      tono:"107",
+      tono:"Peach",
       imagen:"./assets/imagenes/labial7.jfif",
-      alt:"Balsamo",
-      precio: 25000
+      alt:"Laial mate con acabado luminoso",
+      precio: 15000
     
     },
     
 
     {
       uid:"",
-      nombre:"Labial Paradise",
-      tono:"107",
+      nombre:"Labial Avon",
+      tono:"Red Velvet",
       imagen:"./assets/imagenes/labial8.jpg",
-      alt:"Balsamo",
-      precio: 25000
+      alt:"Labial creomoso hidratante",
+      precio: 4000
     
     },
     {
       uid:"",
-      nombre:"Labial Paradise",
-      tono:"107",
+      nombre:"Labial Avon",
+      tono:"Mocca clasico",
       imagen:"./assets/imagenes/labial9.jpg",
-      alt:"Balsamo",
-      precio: 25000
+      alt:"Labial Mate",
+      precio: 4000
     
     },
     {
       uid:"",
-      nombre:"Labial Paradise",
-      tono:"107",
+      nombre:"Labial Avon",
+      tono:"Sweet red",
       imagen:"./assets/imagenes/labial10.jpg",
-      alt:"Balsamo",
-      precio: 25000
+      alt:"Labial mentolado cremoso",
+      precio: 5000
     
     },
     

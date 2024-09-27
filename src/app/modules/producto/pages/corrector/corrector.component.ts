@@ -11,14 +11,15 @@ export class CorrectorComponent {
     this.info = [
       {
         uid:"",
-        nombre:"Rubor Rare Beauty",
-        tono:"Grateful",
-        imagen:"./assets/imagenes/rubor.jpg",
-        alt:"Rubor en crema ",
-        precio: 15000
+        nombre:"Corrector NARS",
+        tono:"07",
+        imagen:"./assets/imagenes/corrector1.jpg",
+        alt:"Corrector Liquido ",
+        precio: 12000
       
       },
     
     ]
   }
 }
+'¿'
