@@ -10,6 +10,10 @@ import { AngularFireModule  } from '@angular/fire/compat'; // Trabaja con las co
 import { AngularFireAuthModule } from '@angular/fire/compat/auth'; //Trabaja con la autentificacion 
 import {AngularFireStorageModule} from '@angular/fire/compat/storage';
 import { SharedModule } from './modules/shared/components/shared/shared.module';
+import { ContactoComponent } from './modules/contacto/contacto.component';
+import { SobrenosotrosComponent } from './modules/sobrenosotros/sobrenosotros.component';
+import { OfertasComponent } from './modules/ofertas/ofertas.component';
+
 
 
 
@@ -17,6 +21,10 @@ import { SharedModule } from './modules/shared/components/shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
+    ContactoComponent,
+    SobrenosotrosComponent,
+    OfertasComponent,
+
    
  
   ],

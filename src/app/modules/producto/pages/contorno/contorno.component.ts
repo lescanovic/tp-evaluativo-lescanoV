@@ -9,15 +9,7 @@ export class ContornoComponent {
   public info : Producto [];
   constructor(){
     this.info = [
-      {
-        uid:"",
-        nombre:"Rubor Rare Beauty",
-        tono:"Grateful",
-        imagen:"./assets/imagenes/rubor.jpg",
-        alt:"Rubor en crema ",
-        precio: 15000
-      
-      },
+     
     
     ]
   }

@@ -11,7 +11,7 @@ export class InicioComponent {
   this.info = [
     {
       uid:"",
-      nombre:" Base de Maquillaje Maybelline",
+      nombre:" Base de Maybelline",
       tono:"30H",
       imagen:"./assets/imagenes/base.jpg",
       alt:"Alta cobertura",
@@ -31,13 +31,13 @@ export class InicioComponent {
     {
       uid:"",
       nombre:"Polvo Fenty Beauty",
-      tono:"30H",
+      tono:"Yellow",
       imagen:"./assets/imagenes/polvo1.jpg",
       alt:"Alta cobertura",
       precio: 8900
     
     },
-   
+    
     
   ]
   

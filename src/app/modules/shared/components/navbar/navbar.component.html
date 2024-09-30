@@ -27,8 +27,7 @@
           <button mat-menu-item routerLink="Iluminador/">Iluminador</button>
       </mat-menu>
      </div>
-  
-    
+   
   <!--Menu desplegable para manejar los accesos de la pagina-->
   
 <div id="loguearse">
@@ -41,11 +40,17 @@
   </mat-menu>
 </div>
  
+  <!--Filtro de busqueda-->
  
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
+  </form>
 
-   <!--Label para modo oscuro-->
+   <!--Label para modo oscuro
+   <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
+
+  <input type="checkbox" id="toggle" (click)="cambiarFondo()">  -->
    
-  <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
-
-  <input type="checkbox" id="toggle" (click)="cambiarFondo()">
+  
 </mat-toolbar>

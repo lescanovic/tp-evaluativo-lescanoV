@@ -1,4 +1,4 @@
-<div class="contenedor">
+<!--<div class="contenedor">
   <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -18,34 +18,35 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-</div>
+</div>--> 
 
-<div class="container">
-<h1>Nuestros mas vendidos</h1>
 <div class="container">
   <div class="row">
       <div class="col">
-          <div *ngFor="let i of info" class="contenido">
-              <mat-card class="card">
-                  <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>{{i.nombre}}</mat-card-title>
-                      <mat-card-subtitle>Tono: {{i.tono}}</mat-card-subtitle>
-                      <mat-card-subtitle>{{i.alt}}</mat-card-subtitle>
-                  </mat-card-header>
+        
+        <h1>Productos Destacados</h1>
+        <p>¡Descubre los favoritos que Divinas tiene para ti!</p>
+        <div *ngFor="let i of info" class="contenido">
+          <mat-card class="card">
+              <mat-card-header>
 
-                  <mat-card-content>
-                      <img mat-card-image src="{{i.imagen}}">
-                      <p>Precio: ${{i.precio}}</p>
-                  </mat-card-content>
-                  <mat-card-actions>
-                      <button id="boton-de-card" mat-button>Comprar</button>
-                  </mat-card-actions>
-              </mat-card>
-          </div>
+                  <mat-card-title>{{i.nombre}}</mat-card-title>
+                  <mat-card-subtitle>{{i.tono}}</mat-card-subtitle>
+                  <mat-card-subtitle>{{i.alt}}</mat-card-subtitle>
+              </mat-card-header>
+        
+              <mat-card-content>
+                  <img mat-card-image src="{{i.imagen}}">
+                  <p>Precio: ${{i.precio}}</p>
+              </mat-card-content>
+              <mat-card-actions>
+                  <button id="boton-de-card" mat-button>Comprar</button>
+              </mat-card-actions>
+          </mat-card>
+        </div>
       </div>
   </div>
 </div>
 
-</div>
+
 

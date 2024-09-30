@@ -41,15 +41,15 @@ export class CrudService {
     return new Promise(async (resolve, reject) => {
       try {
         //Creamos numero identificativo para el producto en la base de datos
-        const idproducto = this.database.createId()
+        const uid = this.database.createId()
         //asignamos ID creado al atributo idProducto a la interfaz producto
-        producto.idProducto = idproducto;
+        producto.uid = uid;
 
         //Asignamos URL recibida del parametro al atributo "imagen" de interfaz de producto
         producto.imagen = url;
 
 
-        const resultado = await this.productosCollection.doc(idproducto).set(producto)
+        const resultado = await this.productosCollection.doc(uid).set(producto)
         resolve(resultado)
       } catch (error) {
         reject(error);
@@ -73,19 +73,19 @@ export class CrudService {
       .pipe(map(action => action.map(a => a.payload.doc.data())))
   }
   //Editar 
-  modificarProducto(idProducto: string, nuevaData: Producto) {
+  modificarProducto(uid: string, nuevaData: Producto) {
     /*Accedemos a la coleccion productos de la base de datos 
     buscamos el id del producto seleccionado y lo actualizamos con el metodo
     "update" enviando la nueva informacion
     */
-    return this.database.collection('productos').doc(idProducto).update(nuevaData);
+    return this.database.collection('productos').doc(uid).update(nuevaData);
   }
 
 
 
 
   //Eliminar
-  eliminarProducto(idProducto: string, imagenUrl: string) {
+  eliminarProducto(uid: string, imagenUrl: string) {
     return new Promise((resolve, reject) => {
       try {
         const storage = getStorage() //Referenciamos nuevamente a la base de datos storage
@@ -95,7 +95,7 @@ export class CrudService {
         //Eliminamos la imagen desde el almacenamiento
         deleteObject(referenciaImagen)
         .then((res) =>{
-          const respuesta = this.productosCollection.doc(idProducto).delete();
+          const respuesta = this.productosCollection.doc(uid).delete();
           resolve(respuesta);
         })
         .catch(error=>{

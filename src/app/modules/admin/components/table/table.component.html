@@ -6,9 +6,7 @@
             <th scope="col">Imagen</th>
             <th scope="col">Nombre </th>
             <th scope="col">Precio</th>
-            <th scope="col">Descripción</th>
-            <th scope="col">Categoría</th>
-            <th scope="col">Acciones</th>
+            <th scope="col">Alt</th>
         </tr>
     </thead>
 
@@ -21,8 +19,7 @@
             </td>
             <td>{{producto.nombre}}</td>
             <td>{{producto.precio}}</td>
-            <td>{{producto.descripcion}}</td>
-            <td>{{producto.categoria}}</td>
+        
 
             <!-- ACCIONES -->
             <td>
@@ -64,26 +61,14 @@
                     <!-- Toma uno por uno los datos del formulario -->
                 </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Ingrese una descripción:</label>
-                    <input class="form-control" type="text" formControlName="descripcion"
-                        placeholder="Ej.: 18 colores tonos calidos">
-                </div>
+              
 
                 <div class="mb-3">
                     <label class="form-label">Ingrese el precio:</label>
                     <input class="form-control" type="number" formControlName="precio" placeholder="...">
                 </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Selecciona una categoría:</label>
-                    <select class="form-control" formControlName="categoria" class="form-select">
-                        <option selected>Elija una opción</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                </div>
+              
 
                 <div class="mb-3">
                     <!-- type : "file" <- recibe archivos
@@ -134,18 +119,14 @@
                     <!-- Toma uno por uno los datos del formulario -->
                 </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Ingrese una descripción:</label>
-                    <input class="form-control" type="text" formControlName="descripcion"
-                        placeholder="{{productoEdit.descripcion}}">
-                </div>
+             
 
                 <div class="mb-3">
                     <label class="form-label">Ingrese el precio:</label>
                     <input class="form-control" type="number" formControlName="precio" placeholder="{{productoEdit.precio}}">
                 </div>
 
-                <div class="mb-3">
+              <!--<div class="mb-3">
                     <label class="form-label">Selecciona una categoría:</label>
                     <select class="form-control" formControlName="categoria" class="form-select">
                         <option selected>Elija una opción</option>
@@ -153,7 +134,7 @@
                         <option value="labios">Labios</option>
                         <option value="ojos">Ojos</option>
                     </select>
-                </div>
+                </div> --->  
 
                 <div class="mb-3">
                     <label class="form-label">Ingrese una imagen:</label>

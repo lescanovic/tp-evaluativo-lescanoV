@@ -9,15 +9,7 @@ export class PolvosComponent {
   public info : Producto [];
   constructor(){
     this.info = [
-      {
-        uid:"",
-        nombre:"Rubor Rare Beauty",
-        tono:"Grateful",
-        imagen:"./assets/imagenes/",
-        alt:"Rubor en crema ",
-        precio: 15000
-      
-      },
+   
     
     ]
   }
