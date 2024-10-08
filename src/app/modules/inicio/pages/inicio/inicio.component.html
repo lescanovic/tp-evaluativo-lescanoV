@@ -1,10 +1,54 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container">
   <div class="row">
       <div class="col">
-        
+
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../../../../../assets/imagenes/imgInicio.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../../../../../assets/imagenes/descuento.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+
         <h1>Productos Destacados</h1>
     
         <div *ngFor="let i of info" class="contenido">
@@ -27,6 +71,7 @@
      
         </div>
         <p>¡Descubre los favoritos que Divinas tiene para ti!</p>
+       
       </div>
 
 
@@ -34,6 +79,8 @@
         <source src="../../../../../assets/imagenes/video.mp4" type="video/mp4">
 
       </video>
+
+  
   </div>
 </div>
 

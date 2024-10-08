@@ -4,24 +4,7 @@ h1{
     text-align: center;
 }
 
-.img-carrusel{
-width: 1400px;
-height: 600px;
 
-
-}
-#carrusel{
- 
-    overflow: hidden;
-  
-}
-
-.carousel-inner {
-    width: 100%;
-  }
-.contenedor{
-    scale: 0,3;
-}
 
 .container {
   padding: 10px;
@@ -66,6 +49,7 @@ img {
   height: 350px;
   align-content: center;
   align-items: center;
+  
 }
 
 button {
@@ -83,4 +67,22 @@ video{
   width: 1000px;
   height: 650px;
   position:relative;
+}
+
+.col{
+ 
+  text-align: center;
+
+
+}
+.d-block{
+width: 50px;
+height: 500px;
+
+
+}
+#carouselExampleRide{
+  padding:150px;
+  align-items: center;
+  
 }

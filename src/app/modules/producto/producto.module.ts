@@ -13,6 +13,7 @@ import { CorrectorComponent } from './pages/corrector/corrector.component';
 import { PolvosComponent } from './pages/polvos/polvos.component';
 import { ContornoComponent } from './pages/contorno/contorno.component';
 import { IluminadorComponent } from './pages/iluminador/iluminador.component';
+import { PerfumeriaComponent } from './pages/perfumeria/perfumeria.component';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { IluminadorComponent } from './pages/iluminador/iluminador.component';
     CorrectorComponent,
     PolvosComponent,
     ContornoComponent,
-    IluminadorComponent
+    IluminadorComponent,
+    PerfumeriaComponent
+
    
 
   ],
