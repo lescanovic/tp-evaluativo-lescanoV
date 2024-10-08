@@ -11,10 +11,12 @@
     <!-- Boton para la vista del inicio --> 
      <div id="botones">
       <button id="menuInicio" mat-button routerLink="/inicio">Inicio</button>
+      
       <!-- Menu desplegable ->Productos -->
       <button id="menuProducto" mat-button [matMenuTriggerFor]="producto">Productos</button>
       <mat-menu #producto="matMenu">
           <button mat-menu-item routerLink="/Labiales">Labiales</button>
+          <button id="menuInicio" mat-button routerLink="/">Perfumeria</button>
           <button mat-menu-item [matMenuTriggerFor]="Rostro">Rostro</button>
         
       </mat-menu>
@@ -26,6 +28,10 @@
           <button mat-menu-item routerLink="Contorno/">Contorno</button>
           <button mat-menu-item routerLink="Iluminador/">Iluminador</button>
       </mat-menu>
+      
+      <button id="menuInicio" mat-button routerLink="/">Contacto</button>
+      <button id="menuInicio" mat-button routerLink="/">Sobre Nosotros</button>
+
      </div>
    
   <!--Menu desplegable para manejar los accesos de la pagina-->
@@ -40,17 +46,19 @@
   </mat-menu>
 </div>
  
-  <!--Filtro de busqueda-->
+
  
-  <form class="form-inline my-2 my-lg-0">
-    <input class="form-control " type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
-  </form>
+
 
    <!--Label para modo oscuro
    <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
 
   <input type="checkbox" id="toggle" (click)="cambiarFondo()">  -->
-   
-  
+
+     <!--Filtro de busqueda-->
+  <form  id="filtro_de_busqueda" class="form-inline my-2 my-lg-0">
+    <input class="form-control " type="search" placeholder="Buscar" aria-label="Search">
+    <button id="boton" class="btn btn-outline-success">Buscar</button>
+  </form>
+
 </mat-toolbar>
