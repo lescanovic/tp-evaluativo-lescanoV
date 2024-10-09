@@ -37,6 +37,7 @@
             <div class="carousel-item">
               <img src="../../../../../assets/imagenes/descuento.jpg" class="d-block w-100" alt="...">
             </div>
+            
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -49,17 +50,17 @@
         </div>
 
 
-        <h1>Productos Destacados</h1>
-    
+      
+        <h1>Nuestras Ofertas</h1>
         <div *ngFor="let i of info" class="contenido">
           <mat-card class="card">
               <mat-card-header>
 
                   <mat-card-title>{{i.nombre}}</mat-card-title>
-                  <mat-card-subtitle>Tono: {{i.tono}}</mat-card-subtitle>
+                  <mat-card-subtitle> {{i.tono}}</mat-card-subtitle>
                   <mat-card-subtitle>{{i.alt}}</mat-card-subtitle>
               </mat-card-header>
-        
+            
               <mat-card-content>
                   <img mat-card-image src="{{i.imagen}}">
                   <p>Precio: ${{i.precio}}</p>
@@ -70,16 +71,22 @@
           </mat-card>
      
         </div>
-        <p>¡Descubre los favoritos que Divinas tiene para ti!</p>
+
+
        
       </div>
 
 
+  
+    <div class="iamgenyvideo">
       <video autoplay muted >
         <source src="../../../../../assets/imagenes/video.mp4" type="video/mp4">
 
       </video>
-
+      <img id="imagenInicio" src="../../../../../assets/imagenes/imagenInicio.jpg">
+    </div>
+        
+    
   
   </div>
 </div>

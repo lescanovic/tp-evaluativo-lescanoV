@@ -1,63 +1,83 @@
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" id="menuSecciones" [matMenuTriggerFor]="seccion">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #seccion="matMenu">
-      <button mat-menu-item routerLink="/inicio">Inicio</button>
-      <button mat-menu-item [matMenuTriggerFor]="producto">Productos</button>
-    </mat-menu>
+<mat-toolbar class="navbar">
+  <span><img src="./assets/imagenes/logo.jpg"></span>
 
-    <span><img src="./assets/imagenes/logo.jpg"></span>
-    <!-- Boton para la vista del inicio --> 
-     <div id="botones">
-      <button id="menuInicio" mat-button routerLink="/inicio">Inicio</button>
-      
-      <!-- Menu desplegable ->Productos -->
-      <button id="menuProducto" mat-button [matMenuTriggerFor]="producto">Productos</button>
-      <mat-menu #producto="matMenu">
+
+  <!--Hago uso de un Dropdown para crear un menu desplegable-->
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <mat-icon>menu</mat-icon>
+    </a>
+    <ul class="dropdown-menu">
+      <button mat-menu-item routerLink="/inicio">Inicio</button>
+      <button mat-menu-item routerLink="/Contacto">Contacto</button>
+      <button mat-menu-item routerLink="/Sobrenosotros">Sobre Nosotros</button>
+      <button mat-menu-item routerLink="/Ofertas">Ofertas</button>
+
+      <button mat-menu-item [matMenuTriggerFor]="producto">Productos</button>
+
+
+      <div id="botones">
+        <!-- Catalogo de productos -->
+        <mat-menu #producto>
           <button mat-menu-item routerLink="/Labiales">Labiales</button>
           <button mat-menu-item routerLink="/Perfumeria">Perfumeria</button>
           <button mat-menu-item [matMenuTriggerFor]="Rostro">Rostro</button>
-        
-      </mat-menu>
-      <mat-menu #Rostro>
+        </mat-menu>
+        <!--Despliegue de la seccion de Rostro-->
+        <mat-menu #Rostro>
           <button mat-menu-item routerLink="Rubores/">Rubores</button>
           <button mat-menu-item routerLink="Bases/">Bases</button>
           <button mat-menu-item routerLink="Corrector/">Correctores</button>
           <button mat-menu-item routerLink="Polvos/">Polvos compactos</button>
           <button mat-menu-item routerLink="Contorno/">Contorno</button>
           <button mat-menu-item routerLink="Iluminador/">Iluminador</button>
-      </mat-menu>
-      
-      <button id="menuInicio" mat-button routerLink="/Contacto">Contacto</button>
-      <button id="menuInicio" mat-button routerLink="/Sobrenosotros">Sobre Nosotros</button>
-      <button id="menuInicio" mat-button routerLink="/Ofertas">Ofertas</button>
-
-     </div>
-   
-  <!--Menu desplegable para manejar los accesos de la pagina-->
-  
-<div id="loguearse">
-  <button mat-button [matMenuTriggerFor]="usuario" ><mat-icon  id="icon">person</mat-icon></button>
-  <mat-menu #usuario="matMenu">
-      <button mat-menu-item (click)="ingresar()" *ngIf="logueado"  routerLink="/registro">Registrarse</button>
-      <button mat-menu-item (click)="ingresar()" *ngIf="logueado"  routerLink="/inicio-sesion">Iniciar Sesion</button>
-      <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado" >Cerrar Sesion</button>
-
-  </mat-menu>
-</div>
- 
-
- 
+        </mat-menu>
 
 
-   <!--Label para modo oscuro
+
+      </div>
+
+    </ul>
+  </li>
+
+
+
+
+
+
+
+
+  <div id="loguearse">
+    <button mat-button [matMenuTriggerFor]="usuario"><mat-icon id="icon">person</mat-icon></button>
+    <mat-menu #usuario="matMenu">
+      <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
+      <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar Sesion</button>
+      <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar Sesion</button>
+
+    </mat-menu>
+  </div>
+
+
+
+
+
+  <!--Label para modo oscuro
    <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
 
   <input type="checkbox" id="toggle" (click)="cambiarFondo()">  -->
 
-     <!--Filtro de busqueda-->
-  <form  id="filtro_de_busqueda" class="form-inline my-2 my-lg-0">
+  <!--Filtro de busqueda-->
+
+  <!--
+    <form (ngSubmit)="buscar()" class="my-3">
+    <input [(ngModel)]="termino" placeholder="Buscar producto" />
+    <button type="submit">Buscar</button>
+  </form>
+  -->
+
+
+  <form id="filtro_de_busqueda" class="form-inline my-2 my-lg-0">
     <input class="form-control " type="search" placeholder="Buscar" aria-label="Search">
     <button id="boton" class="btn btn-outline-success">Buscar</button>
   </form>

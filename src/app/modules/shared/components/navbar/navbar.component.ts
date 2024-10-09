@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/modules/autentificacion/services/auth.service';
 import { Router } from '@angular/router';
-
+import { Producto } from 'src/app/models/producto';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+
+  //Filtro de busqueda
+  public termino: string = ''; 
+  public resultados: Producto[] = []; // Resultados filtrados
+
 
   logueado = true; //Booleana para manejo de registro y el inicio sesion
   deslogueado = false ; //Booleana para manejo de cierre de sesion
@@ -53,5 +58,11 @@ cambiarFondo(){
 
 
 
+}
+
+buscar() {
+  this.resultados = this.info.filter(producto =>
+    producto.nombre.toLowerCase().includes(this.termino.toLowerCase())
+  );
 }
 }
