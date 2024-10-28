@@ -13,9 +13,11 @@ import { SobrenosotrosComponent } from './modules/sobrenosotros/sobrenosotros.co
 import { OfertasComponent } from './modules/ofertas/ofertas.component';
 import { ContactoComponent } from './modules/contacto/contacto.component';
 import { PerfumeriaComponent } from './modules/producto/pages/perfumeria/perfumeria.component';
+import { SombrasComponent } from './modules/producto/pages/sombras/sombras.component';
 
 
 const routes: Routes = [
+  //Rutas Hijas
   {path:"",component: InicioComponent,},
   {path:"Labiales",component:LabialesComponent},
   {path:"Perfumeria",component:PerfumeriaComponent},
@@ -26,14 +28,14 @@ const routes: Routes = [
   {path:"Polvos",component:PolvosComponent},
   {path:"Correctores",component:CorrectorComponent},
   {path:"Sobrenosotros",component:SobrenosotrosComponent},
+  {path:"Sombras",component:SombrasComponent},
   {path:"Ofertas",component:OfertasComponent},
   {path:"Contacto",component:ContactoComponent},
 
 
-
+//Rutas de carga perezosa, renderizan los modulos ()
   {path:"",loadChildren:()=>import('./modules/inicio/inicio.module').then(m=>m.InicioModule)},
   {path:"",loadChildren:()=>import('./modules/producto/producto.module').then(m=>m.ProductoModule)},
-  //{path:"",loadChildren:()=>import(.'/modules/sobrenosotros/sobrenosotros.module').then(m=>m.sobrenosotros)},
   {path:"",loadChildren:()=>import('./modules/autentificacion/autentificacion.module').then(m=>m.AutentificacionModule)},
   {path:"",loadChildren:()=>import('./modules/admin/admin.module').then(m=>m.AdminModule)}
 

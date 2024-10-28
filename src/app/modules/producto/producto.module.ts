@@ -15,6 +15,7 @@ import { PolvosComponent } from './pages/polvos/polvos.component';
 import { ContornoComponent } from './pages/contorno/contorno.component';
 import { IluminadorComponent } from './pages/iluminador/iluminador.component';
 import { PerfumeriaComponent } from './pages/perfumeria/perfumeria.component';
+import { SombrasComponent } from './pages/sombras/sombras.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { PerfumeriaComponent } from './pages/perfumeria/perfumeria.component';
     PolvosComponent,
     ContornoComponent,
     IluminadorComponent,
-    PerfumeriaComponent
+    PerfumeriaComponent,
+    SombrasComponent
 
 
    

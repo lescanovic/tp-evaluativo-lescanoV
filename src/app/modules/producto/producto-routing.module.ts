@@ -8,6 +8,7 @@ import { PolvosComponent } from './pages/polvos/polvos.component';
 import { ContornoComponent } from './pages/contorno/contorno.component';
 import { BasesComponent } from './pages/bases/bases.component';
 import { CorrectorComponent } from './pages/corrector/corrector.component';
+import { SombrasComponent } from './pages/sombras/sombras.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:"Contorno", component:ContornoComponent},
   {path:"Bases", component:BasesComponent},
   {path:"Corrector", component:CorrectorComponent},
+  {path:"Sombras", component:SombrasComponent}
  
 
 ];

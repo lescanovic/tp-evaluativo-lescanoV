@@ -82,13 +82,19 @@ height: 600px;
 
 }
 #carouselExampleRide{
-  padding:120px;
+  /* padding:120px; */
   align-items: center;
-  width: 1350px;
+  /* width: 1350px; */
   height: 600px;
+
+  width: 100%;
   
 }
 #imagenInicio{
   width: 450px;
   height: 500px;
+}
+
+#img-carrusel{
+  object-fit: none;
 }

@@ -24,9 +24,9 @@
 
 
   img{
-    width: 130px;
-    height: 90px;
-    border-radius: 80px;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
   
   }
 
@@ -59,4 +59,7 @@ button{
 
 align-items: end;
 display: flex;
+}
+ul, li{
+  list-style: none;
 }

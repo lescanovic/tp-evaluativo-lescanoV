@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatCardModule } from '@angular/material/card'; //importacion de las cards de Ofertas
 import { environment } from 'src/environments/environments'; //Vinculacion a la Base de datos
 import { AngularFireModule  } from '@angular/fire/compat'; // Trabaja con las colecciones de informacion 
 import { AngularFireAuthModule } from '@angular/fire/compat/auth'; //Trabaja con la autentificacion 
@@ -35,7 +35,10 @@ import { OfertasComponent } from './modules/ofertas/ofertas.component';
     SharedModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    MatCardModule
+    
+
 
 
 

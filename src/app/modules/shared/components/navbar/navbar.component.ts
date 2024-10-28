@@ -60,9 +60,5 @@ cambiarFondo(){
 
 }
 
-buscar() {
-  this.resultados = this.info.filter(producto =>
-    producto.nombre.toLowerCase().includes(this.termino.toLowerCase())
-  );
-}
+
 }

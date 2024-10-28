@@ -4,7 +4,7 @@
 
   <!--Hago uso de un Dropdown para crear un menu desplegable-->
 
-  <li class="nav-item dropdown">
+  <li class="nav-item dropdow">
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <mat-icon>menu</mat-icon>
     </a>
@@ -20,6 +20,7 @@
       <div id="botones">
         <!-- Catalogo de productos -->
         <mat-menu #producto>
+          <button mat-menu-item routerLink="/Sombras">Sombras</button>
           <button mat-menu-item routerLink="/Labiales">Labiales</button>
           <button mat-menu-item routerLink="/Perfumeria">Perfumeria</button>
           <button mat-menu-item [matMenuTriggerFor]="Rostro">Rostro</button>
@@ -49,7 +50,7 @@
 
 
   <div id="loguearse">
-    <button mat-button [matMenuTriggerFor]="usuario"><mat-icon id="icon">person</mat-icon></button>
+    <button mat-icon-button [matMenuTriggerFor]="usuario"><mat-icon id="icon">person</mat-icon></button>
     <mat-menu #usuario="matMenu">
       <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
       <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar Sesion</button>
