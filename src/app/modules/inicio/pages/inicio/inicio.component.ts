@@ -1,128 +1,178 @@
 import { Component } from '@angular/core';
-import { Producto } from 'src/app/models/producto';
+import { Oferta } from 'src/app/models/oferta';
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
-  public info: Producto [] ;
+  public info: Oferta[] ;
   constructor(){
   this.info = [
+    
     {
       uid:"",
-      nombre:" Base de Maybelline",
-      tono:"30H",
-      imagen:"./assets/imagenes/base.jpg",
+      nombre:"Polvo Fenty Beauty",
+      imagen:"./assets/imagenes/polvo1.jpg",
+      tono:"",
       alt:"Alta cobertura",
-      precio: 9800
-    
+      precio:8900,
+      precio2:7500
+    },
+    {
+      uid:"",
+      nombre:"Base de Maybelline",
+      imagen:"./assets/imagenes/base.jpg",
+      tono:"",
+      alt:"Alta cobertura",
+      precio:9800,
+      precio2:8000
     },
     {
       uid:"",
       nombre:"Labial Avon",
-      tono:"Velvet",
       imagen:"./assets/imagenes/labial.jpg",
-      alt:"Labial cremoso",
-      precio: 14000
-    
-    },
-  
-    {
-      uid:"",
-      nombre:"Polvo Fenty Beauty",
-      tono:"Yellow",
-      imagen:"./assets/imagenes/polvo1.jpg",
+      tono:"",
       alt:"Alta cobertura",
-      precio: 8900
-    
+      precio:1400,
+      precio2:10000
     },
     {
       uid:"",
-      nombre:"Paleta de rostro Melu 4 en 1",
-      tono:"",
-      imagen:"./assets/imagenes/oferta9.webp",
-      alt:"",
-      precio: 6500
-    
-    },
-    {
-      uid:"",
-      nombre:"Base liquida Melu",
-      tono:"08",
-      imagen:"./assets/imagenes/oferta8.jpg",
-      alt:"",
-      precio: 6350
-    
-    },
-    
-    {
-      uid:"",
-      nombre:"Base liquida Ruby Rose",
-      tono:"07",
-      imagen:"./assets/imagenes/oferta7.jpg",
-      alt:"",
-      precio: 7000
-    
-    },
-    
-    
-    {
-      uid:"",
-      nombre:"Paleta de Ojos Ruby Rose",
-      tono:"Calidos y Marrones",
-      imagen:"./assets/imagenes/oferta6.png",
-      alt:"",
-      precio: 5000
-    
-    },
-
-    {
-      uid:"",
-      nombre:"Lapiz de ceja Avon",
-      tono:"Negro",
-      imagen:"./assets/imagenes/oferta5.jpg",
-      alt:"",
-      precio: 4500
-    
-    },
-
-    {
-      uid:"",
-      nombre:"Perfume de Violetta",
-      tono:"",
-      imagen:"./assets/imagenes/oferta4.jpg",
-      alt:"",
-      precio: 8900
-    
-    },
-
-    {
-      uid:"",
-      nombre:"Balsamo de labios Nivea",
-      tono:"Tono: Red",
-      imagen:"./assets/imagenes/oferta3.jpg",
-      alt:"",
-      precio: 5500
-    
-    },
-    {
-      uid:"",
-      nombre:"Balsamo de labios Nivea",
-      tono:"Cherry",
-      imagen:"./assets/imagenes/oferta2.jpg",
-      alt:"",
-      precio: 5500
-    
-    },
-    {
-      uid:"",
-      nombre:"Balsamo de labios Nivea",
-      tono:"Pink",
+      nombre:"Manteca de cacao Nivea",
       imagen:"./assets/imagenes/oferta1.jpg",
+      tono:"Rose pink",
+      alt:"Balsamo labial evita la resequedad y cura heridas",
+      precio:6500,
+      precio2:4500
+    },
+    {
+      uid:"",
+      nombre:"Manteca de cacao Nivea",
+      imagen:"./assets/imagenes/oferta2.jpg",
+      tono:"Cherry",
+      alt:"Balsamo labial evita la resequedad y cura heridas",
+      precio:6500,
+      precio2:4500
+    },
+    {
+      uid:"",
+      nombre:"Manteca de cacao Nivea",
+      imagen:"./assets/imagenes/oferta3.jpg",
+      tono:"Red",
+      alt:"Balsamo labial evita la resequedad y cura heridas",
+      precio:6500,
+      precio2:4500
+    },
+    {
+      uid:"",
+      nombre:"Perfume de Violetta, fragancia a jazmin",
+      imagen:"./assets/imagenes/oferta4.jpg",
+      tono:"",
       alt:"",
-      precio: 5500
+      precio:15400,
+      precio2:10000
+    },
+    {
+      uid:"",
+      nombre:"Lapiz de ceja Avon, linea Power Stay",
+      imagen:"./assets/imagenes/oferta5.jpg",
+      tono:"Negro",
+      alt:"",
+      precio:5000,
+      precio2:3000
+    },
+    {
+      uid:"",
+      nombre:"Paleta de sombras de Ruby Rose",
+      imagen:"./assets/imagenes/oferta6.png",
+      tono:"",
+      alt:"10 tonos de sombras, tornasoladas y matte",
+      precio:7850,
+      precio2:6350
+    },
+    {
+      uid:"",
+      nombre:"Base liquida de Ruby Rose",
+      imagen:"./assets/imagenes/oferta7.jpg",
+      tono:"",
+      alt:"",
+      precio:212,
+      precio2:43
+    },{
+      uid:"",
+      nombre:"Base Liquida de Melu",
+      imagen:"./assets/imagenes/oferta8.jpg",
+      tono:"",
+      alt:"",
+      precio:212,
+      precio2:43
     
+    },
+    {
+      uid:"",
+      nombre:"Paleta de rubor, contorno e iluminador de Melu",
+      imagen:"./assets/imagenes/oferta9.webp",
+      tono:"",
+      alt:"",
+      precio:8900,
+      precio2:7800
+    },
+    {
+      uid:"",
+      nombre:"Polvo Traslúcido Pink 21",
+      imagen:"./assets/imagenes/oferta10.webp",
+      tono:"",
+      alt:"",
+      precio:6650,
+      precio2:3900
+    },
+   
+    {
+      uid:"",
+      nombre:"Rubor de Pink 21",
+      imagen:"./assets/imagenes/oferta12.jpeg",
+      tono:"",
+      alt:"",
+      precio:3000,
+      precio2:1500
+    },
+    {
+      uid:"",
+      nombre:"Rubor de Pink 21",
+      imagen:"./assets/imagenes/oferta13.jpeg",
+      tono:"",
+      alt:"",
+      precio:3000,
+      precio2:1500
+    },
+    {
+      uid:"",
+      nombre:"Labial de avon",
+      imagen:"./assets/imagenes/labialoferta.jpg",
+      tono:"",
+      alt:"",
+      precio:9800,
+      precio2:8000
+    },
+    {
+      uid:"",
+      nombre:"Labial de avon",
+      imagen:"./assets/imagenes/labialoferta.jpg",
+      tono:"",
+      alt:"",
+      precio:9800,
+      precio2:8000
+    },
+    {
+      uid:"",
+      nombre:"Labial de avon",
+      imagen:"./assets/imagenes/labialoferta.jpg",
+      tono:"",
+      alt:"",
+      precio:9800,
+      precio2:8000
     },
   ]
   

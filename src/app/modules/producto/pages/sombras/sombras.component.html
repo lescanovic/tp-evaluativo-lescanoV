@@ -2,7 +2,11 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div *ngFor="let i of info" class="contenido">
+            <form id="filtro_de_busqueda" class="form-inline my-2 my-lg-0">
+                <input class="form-control" name ="filtroBusqueda" type="search" placeholder="Buscar.." >
+                <button id="boton" class="btn btn-outline-success">Buscar</button>
+              </form>
+            <div *ngFor="let i of info " class="contenido">
                 <mat-card class="card">
                     <mat-card-header>
                         <div mat-card-avatar class="example-header-image"></div>

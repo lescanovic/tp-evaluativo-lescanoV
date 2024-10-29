@@ -14,6 +14,7 @@ import { ContactoComponent } from './modules/contacto/contacto.component';
 import { SobrenosotrosComponent } from './modules/sobrenosotros/sobrenosotros.component';
 import { OfertasComponent } from './modules/ofertas/ofertas.component';
 
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -24,6 +25,7 @@ import { OfertasComponent } from './modules/ofertas/ofertas.component';
     ContactoComponent,
     SobrenosotrosComponent,
     OfertasComponent,
+ 
 
    
  
@@ -36,7 +38,9 @@ import { OfertasComponent } from './modules/ofertas/ofertas.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireStorageModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+  
     
 
 

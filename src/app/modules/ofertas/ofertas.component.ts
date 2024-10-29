@@ -11,6 +11,33 @@ constructor(){
   this.info = [
     {
       uid:"",
+      nombre:"Polvo Fenty Beauty",
+      imagen:"./assets/imagenes/polvo1.jpg",
+      tono:"",
+      alt:"Alta cobertura",
+      precio:8900,
+      precio2:7500
+    },
+    {
+      uid:"",
+      nombre:"Base de Maybelline",
+      imagen:"./assets/imagenes/base.jpg",
+      tono:"",
+      alt:"Alta cobertura",
+      precio:9800,
+      precio2:8000
+    },
+    {
+      uid:"",
+      nombre:"Labial Avon",
+      imagen:"./assets/imagenes/labial.jpg",
+      tono:"",
+      alt:"Alta cobertura",
+      precio:1400,
+      precio2:10000
+    },
+    {
+      uid:"",
       nombre:"Manteca de cacao Nivea",
       imagen:"./assets/imagenes/oferta1.jpg",
       tono:"Rose pink",
@@ -118,8 +145,34 @@ constructor(){
       precio:3000,
       precio2:1500
     },
- 
-
+    {
+      uid:"",
+      nombre:"Labial de avon",
+      imagen:"./assets/imagenes/labialoferta.jpg",
+      tono:"",
+      alt:"",
+      precio:9800,
+      precio2:8000
+    },
+    {
+      uid:"",
+      nombre:"Labial de avon",
+      imagen:"./assets/imagenes/labialoferta.jpg",
+      tono:"",
+      alt:"",
+      precio:9800,
+      precio2:8000
+    },
+    {
+      uid:"",
+      nombre:"Labial de avon",
+      imagen:"./assets/imagenes/labialoferta.jpg",
+      tono:"",
+      alt:"",
+      precio:9800,
+      precio2:8000
+    },
+    
   ]
 }
 

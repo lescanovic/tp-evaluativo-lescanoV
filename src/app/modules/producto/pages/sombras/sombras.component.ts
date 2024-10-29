@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
+
+
 @Component({
   selector: 'app-sombras',
   templateUrl: './sombras.component.html',
   styleUrls: ['./sombras.component.css']
 })
 export class SombrasComponent {
-  public info: Producto [] ;
+  public info: Producto [] 
+  
   constructor(){
+  
     this.info = [
       {
         uid:"",

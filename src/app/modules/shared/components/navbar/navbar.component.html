@@ -1,31 +1,25 @@
+<mat-toolbar id="animacion">
+  <p>¡Compra minima de 20.000 pesos! con 50% off en transferencias</p>
+</mat-toolbar> 
+
 <mat-toolbar class="navbar">
-  <span><img src="./assets/imagenes/logo.jpg"></span>
 
-
-  <!--Hago uso de un Dropdown para crear un menu desplegable-->
-
-  <li class="nav-item dropdow">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <mat-icon>menu</mat-icon>
-    </a>
-    <ul class="dropdown-menu">
+  <!-- Menú -->
+  <a class="menu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <mat-icon>menu</mat-icon>
+    <li class="dropdown-menu">
       <button mat-menu-item routerLink="/inicio">Inicio</button>
       <button mat-menu-item routerLink="/Contacto">Contacto</button>
       <button mat-menu-item routerLink="/Sobrenosotros">Sobre Nosotros</button>
       <button mat-menu-item routerLink="/Ofertas">Ofertas</button>
-
       <button mat-menu-item [matMenuTriggerFor]="producto">Productos</button>
-
-
       <div id="botones">
-        <!-- Catalogo de productos -->
         <mat-menu #producto>
           <button mat-menu-item routerLink="/Sombras">Sombras</button>
           <button mat-menu-item routerLink="/Labiales">Labiales</button>
           <button mat-menu-item routerLink="/Perfumeria">Perfumeria</button>
           <button mat-menu-item [matMenuTriggerFor]="Rostro">Rostro</button>
         </mat-menu>
-        <!--Despliegue de la seccion de Rostro-->
         <mat-menu #Rostro>
           <button mat-menu-item routerLink="Rubores/">Rubores</button>
           <button mat-menu-item routerLink="Bases/">Bases</button>
@@ -34,53 +28,26 @@
           <button mat-menu-item routerLink="Contorno/">Contorno</button>
           <button mat-menu-item routerLink="Iluminador/">Iluminador</button>
         </mat-menu>
-
-
-
       </div>
+    </li>
+  </a>
 
-    </ul>
-  </li>
+  <!-- Logo -->
+  <img src="../../../../../../../assets/imagenes/logo.jpg" routerLink="/inicio" class="logo">
 
-
-
-
-
-
+  <!-- Buscador -->
 
 
+  <!-- Loguearse -->
   <div id="loguearse">
-    <button mat-icon-button [matMenuTriggerFor]="usuario"><mat-icon id="icon">person</mat-icon></button>
+    <button mat-icon-button [matMenuTriggerFor]="usuario">
+      <mat-icon id="icon">person</mat-icon>
+    </button>
     <mat-menu #usuario="matMenu">
       <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
       <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar Sesion</button>
       <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar Sesion</button>
-
     </mat-menu>
   </div>
-
-
-
-
-
-  <!--Label para modo oscuro
-   <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
-
-  <input type="checkbox" id="toggle" (click)="cambiarFondo()">  -->
-
-  <!--Filtro de busqueda-->
-
-  <!--
-    <form (ngSubmit)="buscar()" class="my-3">
-    <input [(ngModel)]="termino" placeholder="Buscar producto" />
-    <button type="submit">Buscar</button>
-  </form>
-  -->
-
-
-  <form id="filtro_de_busqueda" class="form-inline my-2 my-lg-0">
-    <input class="form-control " type="search" placeholder="Buscar" aria-label="Search">
-    <button id="boton" class="btn btn-outline-success">Buscar</button>
-  </form>
 
 </mat-toolbar>

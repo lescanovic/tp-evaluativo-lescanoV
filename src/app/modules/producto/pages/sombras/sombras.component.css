@@ -52,3 +52,10 @@ button {
   
    
 }
+#filtro_de_busqueda {
+  
+    display: flex;
+    align-items: center;
+    margin-right:0%; /* Para centrar el buscador */
+    margin-left: 500px;
+  }

@@ -24,43 +24,34 @@
 
 
       
-        <h1>Nuestras Ofertas</h1>
-        <div *ngFor="let i of info" class="contenido">
-          <mat-card class="card">
-              <mat-card-header>
+        <h1 id="titulo">Nuestras Ofertas</h1>
+    
 
-                  <mat-card-title>{{i.nombre}}</mat-card-title>
-                  <mat-card-subtitle> {{i.tono}}</mat-card-subtitle>
-                  <mat-card-subtitle>{{i.alt}}</mat-card-subtitle>
-              </mat-card-header>
-            
-              <mat-card-content>
-                  <img mat-card-image src="{{i.imagen}}">
-                  <p>Precio: ${{i.precio}}</p>
-              </mat-card-content>
-              <mat-card-actions>
-                  <button id="boton-de-card" mat-button>Comprar</button>
-              </mat-card-actions>
-          </mat-card>
-     
-        </div>
 
+          <div *ngFor="let i of info" class="contenido">
+              <mat-card class="card">
+                  <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{i.nombre}}</mat-card-title>
+                      <mat-card-subtitle></mat-card-subtitle>
+                      <mat-card-subtitle>{{i.alt}}</mat-card-subtitle>
+                  </mat-card-header>
+
+                  <mat-card-content>
+                      <img id="img-card" mat-card-image src="{{i.imagen}}">
+                    
+                      <p><s>${{i.precio}}</s></p>
+                      <p>${{i.precio2}}</p>
+                  </mat-card-content>
+                  <mat-card-actions>
+                      <button id="boton-de-card" mat-button>Comprar</button>
+                  </mat-card-actions>
+              </mat-card>
+          </div>
+  
 
        
       </div>
-
-
-  
-    <div class="iamgenyvideo">
-      <video autoplay muted >
-        <source src="../../../../../assets/imagenes/video.mp4" type="video/mp4">
-
-      </video>
-      <img id="imagenInicio" src="../../../../../assets/imagenes/imagenInicio.jpg">
-    </div>
-        
-    
-  
   </div>
 </div>
 
