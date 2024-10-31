@@ -27,3 +27,20 @@ mat-form-field{
    
 
 }
+
+@media (max-width: 599px) {
+    .container {
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+  
+    .boton {
+      width: 100%;
+      max-width: 150px;
+      height: 45px;
+      font-size: 14px;
+    }
+  
+    mat-form-field {
+      width: 90%; /* Ajusta el ancho del formulario en pantallas pequeñas */
+    }
+}

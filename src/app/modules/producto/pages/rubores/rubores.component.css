@@ -51,3 +51,33 @@ button {
   
    
 }
+
+@media (max-width: 599px) {
+    h1 {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .container {
+      padding: 5px;
+      gap: 15px;
+      display: grid;
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+  
+    .contenido {
+      margin: 10px auto;
+      padding: 10px;
+      width: 100%;
+    }
+  
+    .card {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }

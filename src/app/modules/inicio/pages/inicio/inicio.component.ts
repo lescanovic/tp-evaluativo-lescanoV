@@ -156,24 +156,7 @@ export class InicioComponent {
       precio:9800,
       precio2:8000
     },
-    {
-      uid:"",
-      nombre:"Labial de avon",
-      imagen:"./assets/imagenes/labialoferta.jpg",
-      tono:"",
-      alt:"",
-      precio:9800,
-      precio2:8000
-    },
-    {
-      uid:"",
-      nombre:"Labial de avon",
-      imagen:"./assets/imagenes/labialoferta.jpg",
-      tono:"",
-      alt:"",
-      precio:9800,
-      precio2:8000
-    },
+  
   ]
   
   

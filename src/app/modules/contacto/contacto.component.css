@@ -35,3 +35,20 @@
         padding-top: 20px;
        
     }
+    @media (max-width: 599px) {
+        .container {
+          flex-direction: column; /* Ajusta la dirección para pantallas pequeñas */
+        }
+      
+        .boton {
+          width: 100%;
+          max-width: 150px;
+          height: 45px;
+          font-size: 14px;
+        }
+      
+        input {
+          width: 90%; /* Reduce el ancho del input en pantallas pequeñas */
+          height: 45px;
+        }
+      }

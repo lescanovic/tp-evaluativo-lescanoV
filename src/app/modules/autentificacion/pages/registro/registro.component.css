@@ -23,3 +23,9 @@ mat-form-field{
 width: 500px;
 
 }
+
+@media (max-width: 599px) {
+    mat-form-field {
+      width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+    }
+  }

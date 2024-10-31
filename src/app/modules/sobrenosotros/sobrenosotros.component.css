@@ -1,6 +1,46 @@
-p{
+.container {
+    padding: 10px;
+    margin-top: 20px;
     text-align: center;
+    border: 2px solid rgb(214, 188, 198);
+    border-radius: 8px;
 }
-container{
-    align-items: center;
+
+.col {
+    padding: 10px;
+}
+
+h3 {
+    margin-top: 15px;
+    color: #000000; 
+}
+
+p, ul {
+    font-size: 16px; /* Ajusta el tamaño de fuente para mejor lectura */
+    line-height: 1.5; /* Mejora el espaciado entre líneas */
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    text-align: left;
+    margin-bottom: 10px; /* Espaciado entre los elementos de la lista */
+}
+
+/* Responsive */
+@media (max-width: 599px) {
+    .container {
+        padding: 5px;
+    }
+
+    p, h3 {
+        font-size: 14px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+    }
+}
+img{
+    width: 200px;
+    border-radius: 100px;
 }
