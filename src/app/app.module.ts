@@ -1,23 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule } from '@angular/material/card'; //importacion de las cards de Ofertas
-import { environment } from 'src/environments/environments'; //Vinculacion a la Base de datos
-import { AngularFireModule  } from '@angular/fire/compat'; // Trabaja con las colecciones de informacion 
-import { AngularFireAuthModule } from '@angular/fire/compat/auth'; //Trabaja con la autentificacion 
-import {AngularFireStorageModule} from '@angular/fire/compat/storage';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table'; // Para tablas
+import { MatButtonModule } from '@angular/material/button'; // Para botones
+import { environment } from 'src/environments/environments';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { SharedModule } from './modules/shared/components/shared/shared.module';
 import { ContactoComponent } from './modules/contacto/contacto.component';
 import { SobrenosotrosComponent } from './modules/sobrenosotros/sobrenosotros.component';
 import { OfertasComponent } from './modules/ofertas/ofertas.component';
-
 import { FormsModule } from '@angular/forms';
-
-
-
+import { CarritoComponent } from './modules/carrito/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +23,7 @@ import { FormsModule } from '@angular/forms';
     ContactoComponent,
     SobrenosotrosComponent,
     OfertasComponent,
- 
-
-   
- 
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,15 +34,9 @@ import { FormsModule } from '@angular/forms';
     AngularFireAuthModule,
     AngularFireStorageModule,
     MatCardModule,
+    MatTableModule,
+    MatButtonModule, 
     FormsModule,
-  
-    
-
-
-
-
-
- 
   ],
   providers: [],
   bootstrap: [AppComponent]

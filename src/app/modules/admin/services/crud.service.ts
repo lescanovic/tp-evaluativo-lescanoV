@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs';
-
+import Swal from 'sweetalert2';
 //importaciones para manejo de archivos y referencias
 import { getDownloadURL, getStorage, ref, UploadResult, uploadString, deleteObject } from 'firebase/storage';
 /*
@@ -19,6 +19,74 @@ import { getDownloadURL, getStorage, ref, UploadResult, uploadString, deleteObje
   providedIn: 'root'
 })
 export class CrudService {
+
+
+
+
+
+
+  coleccionCarrito: any[] = []
+  cantidadItemCarrito: number = 0;
+  totalCarrito: number = 0;
+
+  //Carrito de compras 
+  calcularTotal() {
+    this.totalCarrito = 0 //Reinicia el total antes de calcular
+    this.coleccionCarrito.forEach((element) => {
+      element.subTotal = element.precio * element.cantidad
+      this.totalCarrito += element.subTotal
+
+    });
+    this.totalCarrito = parseFloat(this.totalCarrito.toFixed(2));
+  }
+
+  //Agregar o Actulizar la cantidad de productos
+
+  AgregarAlCarrito(item: any) {
+    const index = this.coleccionCarrito.findIndex(
+      (element) => element.nombre === item.nombre
+    );
+    if (index !== -1) {
+      this.coleccionCarrito[index].cantidad = item.cantidad;
+      if (this.coleccionCarrito[index].cantidad <= 0) {
+        this.eliminarItem(this.coleccionCarrito[index]); //eliminar si la cantidad es 0 o menos
+      }
+    }
+    else {
+      const nuevoElement = {
+        ...item,
+        cantidad: item.cantidad > 0 ? item.cantidad : 1
+      }
+      this.coleccionCarrito.push(nuevoElement)
+    }
+    this.cantidadItemCarrito = this.coleccionCarrito.length
+    this.calcularTotal()
+
+    Swal.fire({
+      title: "¡Muy bien!",
+      text: "¡Tu producto ya se agrego al carrito!",
+      icon: "success"
+    });
+    console.log(this.totalCarrito)
+  }
+
+  eliminarItem(item: any){
+    const  index = this.coleccionCarrito.indexOf(item);
+    if(index !== -1){
+      this.coleccionCarrito.splice(index,1)
+    }
+    this.cantidadItemCarrito = this.coleccionCarrito.length
+    this.calcularTotal()
+  }
+
+
+
+
+
+
+
+
+
 
   //Definimos coleccion para los productos de la web
   private productosCollection: AngularFirestoreCollection<Producto>
