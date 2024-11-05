@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
-
+import { CrudService } from 'src/app/modules/admin/services/crud.service';
 
 @Component({
   selector: 'app-sombras',
@@ -10,7 +10,7 @@ import { Producto } from 'src/app/models/producto';
 export class SombrasComponent {
   public info: Producto [] 
   
-  constructor(){
+  constructor(public crudService: CrudService){
   
     this.info = [
       {

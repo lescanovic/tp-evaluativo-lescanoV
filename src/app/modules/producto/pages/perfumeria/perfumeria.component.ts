@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
+import { CrudService } from 'src/app/modules/admin/services/crud.service';
 @Component({
   selector: 'app-perfumeria',
   templateUrl: './perfumeria.component.html',
@@ -7,7 +8,7 @@ import { Producto } from 'src/app/models/producto';
 })
 export class PerfumeriaComponent {
 public info:  Producto[]
-constructor(){
+constructor(public crudService: CrudService){
   this.info = [
     {
       uid:"",

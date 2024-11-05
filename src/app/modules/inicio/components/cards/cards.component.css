@@ -1,0 +1,84 @@
+.container {
+  padding: 10px;
+  justify-content: center;
+  background-color:  rgb(248, 234, 239);
+  max-width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Espacio entre las tarjetas */
+  box-sizing: border-box;
+}
+
+h1 {
+text-align: center;
+font-size: 50px;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.contenido {
+  width: 200px;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 130px;
+  margin-left: 80px;
+
+}
+
+p {
+  padding: 5px;
+}
+
+img {
+  width: 250px;
+  height: 200px;
+  align-items: center;
+}
+
+.card {
+  width: 400px;
+  height: 400px;
+  align-content: center;
+  border-radius: 50px;
+  align-items: center;
+}
+
+button {
+  text-align: center;
+  background-color: rgb(237, 163, 190);
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+
+ 
+}
+
+@media (max-width: 599px) {
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .container {
+    padding: 5px;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+
+  .contenido {
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

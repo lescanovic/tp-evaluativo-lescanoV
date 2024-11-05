@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ProductoRoutingModule } from './producto-routing.module';
 import { LabialesComponent } from './pages/labiales/labiales.component';
 
-
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
@@ -39,7 +39,8 @@ import { SombrasComponent } from './pages/sombras/sombras.component';
     ProductoRoutingModule,
     MatCardModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ]
 })
 export class ProductoModule { }

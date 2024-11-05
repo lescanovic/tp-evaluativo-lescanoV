@@ -9,7 +9,7 @@
                 <button id="boton" class="btn btn-outline-success">Buscar</button>
               </form>   
 -->
-            
+            <h1>Sombras</h1>
 
 
             <div *ngFor="let i of info " class="contenido">
@@ -26,7 +26,7 @@
                         <p>Precio: ${{i.precio}}</p>
                     </mat-card-content>
                     <mat-card-actions>
-                        <button mat-button>Comprar</button>
+                        <button mat-button (click)="crudService.AgregarAlCarrito(i)">Comprar</button>
                     </mat-card-actions>
                 </mat-card>
             </div>
