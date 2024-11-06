@@ -19,12 +19,6 @@ import { getDownloadURL, getStorage, ref, UploadResult, uploadString, deleteObje
   providedIn: 'root'
 })
 export class CrudService {
-
-
-
-
-
-
   coleccionCarrito: any[] = []
   cantidadItemCarrito: number = 0;
   totalCarrito: number = 0;
@@ -220,5 +214,7 @@ export class CrudService {
       return this.respuesta
     }
   }
+
+  
 
 }

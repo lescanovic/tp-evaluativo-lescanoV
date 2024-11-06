@@ -6,13 +6,12 @@ import { MatIconModule } from '@angular/material/icon';
 import  {MatTableModule} from '@angular/material/table'
 import { FormsModule } from '@angular/forms';
 
-import { CarritoComponent } from './carrito/carrito.component';
 import { CarritoRoutingModule } from './carrito-routing.module';
 
 
 @NgModule({
   declarations: [
-  CarritoComponent
+
   ],
   imports: [
     CommonModule,

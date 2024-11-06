@@ -18,7 +18,7 @@ export class CardsComponent {
       nombre:"Polvo Fenty Beauty",
       imagen:"./assets/imagenes/polvo1.jpg",
       tono:"",
-      alt:"Alta cobertura",
+      alt:"Polvo en tono Banana iluminador",
       precio:8900,
       precio2:7500
     },
@@ -35,8 +35,8 @@ export class CardsComponent {
       uid:"",
       nombre:"Labial Avon",
       imagen:"./assets/imagenes/labial.jpg",
-      tono:"",
-      alt:"Alta cobertura",
+      tono:"Tono: Nude",
+      alt:"Labial cremoso hidratante con acido hialurónico en el centro",
       precio:1400,
       precio2:10000
     },
@@ -44,7 +44,7 @@ export class CardsComponent {
       uid:"",
       nombre:"Manteca de cacao Nivea",
       imagen:"./assets/imagenes/oferta1.jpg",
-      tono:"Rose pink",
+      tono:"Tono: Rose pink",
       alt:"Balsamo labial evita la resequedad y cura heridas",
       precio:6500,
       precio2:4500
@@ -53,7 +53,7 @@ export class CardsComponent {
       uid:"",
       nombre:"Manteca de cacao Nivea",
       imagen:"./assets/imagenes/oferta2.jpg",
-      tono:"Cherry",
+      tono:"Tono: Cherry",
       alt:"Balsamo labial evita la resequedad y cura heridas",
       precio:6500,
       precio2:4500
@@ -62,7 +62,7 @@ export class CardsComponent {
       uid:"",
       nombre:"Manteca de cacao Nivea",
       imagen:"./assets/imagenes/oferta3.jpg",
-      tono:"Red",
+      tono:"Tono: Red",
       alt:"Balsamo labial evita la resequedad y cura heridas",
       precio:6500,
       precio2:4500
@@ -97,8 +97,7 @@ export class CardsComponent {
    
   ]
   
-  
-  
   }
+  
 
 }

@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import Swal from 'sweetalert2';
 import { CrudService } from '../../admin/services/crud.service';
+import Swal from 'sweetalert2';
 @Component({
-  selector: 'app-carrito',
-  templateUrl: './carrito.component.html',
-  styleUrls: ['./carrito.component.css']
+  selector: 'app-pagar',
+  templateUrl: './pagar.component.html',
+  styleUrls: ['./pagar.component.css']
 })
-export class CarritoComponent {
+export class PagarComponent {
+
   dataSource = this.crudService.coleccionCarrito; 
 constructor(public crudService : CrudService){}
 

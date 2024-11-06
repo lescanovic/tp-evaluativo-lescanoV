@@ -16,7 +16,7 @@ import { SobrenosotrosComponent } from './modules/sobrenosotros/sobrenosotros.co
 import { OfertasComponent } from './modules/ofertas/ofertas.component';
 import { FormsModule } from '@angular/forms';
 import { CarritoComponent } from './modules/carrito/carrito/carrito.component';
-
+import { PagarComponent } from './modules/pag/pagar/pagar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +24,7 @@ import { CarritoComponent } from './modules/carrito/carrito/carrito.component';
     SobrenosotrosComponent,
     OfertasComponent,
     CarritoComponent,
+    PagarComponent
   ],
   imports: [
     BrowserModule,

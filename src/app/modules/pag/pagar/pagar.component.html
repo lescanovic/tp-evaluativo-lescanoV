@@ -1,5 +1,9 @@
-<!-- Carrito de compras -->
-<div class="carrito-resumen">
+
+<div class="container">
+  <p>¡Que bueno que decidiste comprar en Divinas Makeup!</p>
+
+  <h1>Mi carrito:</h1>
+  <div class="carrito-resumen">
     <h1><strong>Carrito de compras </strong></h1> <!-- Título del carrito de compras -->
     
     <mat-table [dataSource]="crudService.coleccionCarrito" class="mat-elevation-z8">
@@ -13,6 +17,7 @@
         <ng-container matColumnDef="cantidad">
             <mat-header-cell *matHeaderCellDef>Cantidad</mat-header-cell> <!-- Encabezado de la columna -->
             <mat-cell *matCellDef="let item">
+              <label ></label>
                 <input type="number" [(ngModel)]="item.cantidad" min="1" (ngModelChange)="actSubtotal(item)">
                 <!-- Campo de entrada para modificar la cantidad del producto -->
                 <!-- Al cambiar la cantidad, se llama a la función actSubtotal para actualizar el subtotal -->
@@ -43,4 +48,6 @@
     </mat-table>
     <h1 id="total"> <strong>Total:${{crudService.totalCarrito}}</strong></h1>
     <button id="boton" type="button" class="btn" routerLink="/pagar" ><b>Continuar Compra</b></button>
+</div>
+
 </div>
