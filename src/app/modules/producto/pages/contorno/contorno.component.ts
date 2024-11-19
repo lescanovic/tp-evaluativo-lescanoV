@@ -16,7 +16,9 @@ export class ContornoComponent {
         tono:"",
         imagen:"./assets/imagenes/contorno1.jpg",
         alt:"4 tonos de controno en crema con durabilidad de 12 horasa",
-        precio: 7900
+        precio: 7900,
+        stock: 0
+      
       
       },
       {
@@ -25,7 +27,9 @@ export class ContornoComponent {
         tono:"",
         imagen:"./assets/imagenes/contorno2.jpeg",
         alt:"Contorno en polvo marmolado luminoso",
-        precio: 6500
+        precio: 6500,
+        stock: 0
+      
       
       },
       {
@@ -34,7 +38,9 @@ export class ContornoComponent {
         tono:"",
         imagen:"./assets/imagenes/contorno3.jpeg",
         alt:"6 tonos de contorno en polvo",
-        precio: 12000
+        precio: 12000,
+        stock: 0
+      
       
       },
       {
@@ -43,7 +49,9 @@ export class ContornoComponent {
         tono:"",
         imagen:"./assets/imagenes/contorno4.jpeg",
         alt:"4 tonos de contorno en crema anti brillosidad",
-        precio: 7550
+        precio: 7550,
+        stock: 0
+      
       
       },
       {
@@ -52,7 +60,9 @@ export class ContornoComponent {
         tono:"",
         imagen:"./assets/imagenes/contorno5.jpg",
         alt:"Contorno liquido",
-        precio: 3500
+        precio: 3500,
+        stock: 0
+      
       
       },
       {
@@ -61,7 +71,9 @@ export class ContornoComponent {
         tono:"",
         imagen:"./assets/imagenes/contorno6.webp",
         alt:"Contorno liquido luminoso",
-        precio: 5000
+        precio: 5000,
+        stock: 0
+      
       
       },
       {
@@ -70,7 +82,9 @@ export class ContornoComponent {
         tono:"",
         imagen:"./assets/imagenes/contorno7.webp",
         alt:"Contorno en polvo con acabado mate",
-        precio: 8990
+        precio: 8990,
+        stock: 0
+      
       
       },
       {
@@ -79,7 +93,8 @@ export class ContornoComponent {
         tono:"",
         imagen:"./assets/imagenes/contorno8.webp",
         alt:"Contorno liquido con aplicador",
-        precio: 9950
+        precio: 9950,
+        stock: 0
       
       },
       {
@@ -88,7 +103,8 @@ export class ContornoComponent {
         tono:"",
         imagen:"./assets/imagenes/contorno9.webp",
         alt:"Contorno en barra",
-        precio: 8650
+        precio: 8650,
+        stock: 0
       
       },
     

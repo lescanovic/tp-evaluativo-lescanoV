@@ -19,7 +19,9 @@ export class SombrasComponent {
         tono:"",
         imagen:"./assets/imagenes/sombra1.jpg",
         alt:"12 Tonos de colores, metalizados y matte",
-        precio: 2500
+        precio: 2500,
+        stock: 0
+      
       },
       {
         uid:"",
@@ -27,14 +29,18 @@ export class SombrasComponent {
         tono:"",
         imagen:"./assets/imagenes/sombra2.webp",
         alt:"3 tonos primaverales",
-        precio: 4000
+        precio: 4000,
+        stock: 0
+      
       },     {
         uid:"",
         nombre:"Paleta de sombras pink 21",
         tono:"",
         imagen:"./assets/imagenes/sombra3.jpeg",
         alt:"4 tonos de colores, metalizados y matte",
-        precio: 4500
+        precio: 4500,
+        stock: 0
+      
       },
       {
         uid:"",
@@ -42,7 +48,9 @@ export class SombrasComponent {
         tono:"",
         imagen:"./assets/imagenes/sombra4.png",
         alt:"18 tonos de colores, metalizados, mate y tornasolados",
-        precio: 7000
+        precio: 7000,
+        stock: 0
+      
       },
       {
         uid:"",
@@ -50,7 +58,9 @@ export class SombrasComponent {
         tono:"",
         imagen:"./assets/imagenes/sombra5.webp",
         alt:"12 tonos distintos de la paleta nueva de la marca Melu, pigmentacion media",
-        precio: 6500
+        precio: 6500,
+        stock: 0
+      
       },
       {
         uid:"",
@@ -58,7 +68,9 @@ export class SombrasComponent {
         tono:"",
         imagen:"./assets/imagenes/sombra6.webp",
         alt:"4 tonos de sombras de la marca Mely, pigmentancion media-alta",
-        precio: 3000
+        precio: 3000,
+        stock: 0
+      
       },
       {
         uid:"",
@@ -66,7 +78,9 @@ export class SombrasComponent {
         tono:"",
         imagen:"./assets/imagenes/sombra7.jpeg",
         alt:"9 colores de sombras, tonos primaverales y veraniles",
-        precio: 5000
+        precio: 5000,
+        stock: 0
+      
       },
       {
         uid:"",
@@ -74,7 +88,9 @@ export class SombrasComponent {
         tono:"",
         imagen:"./assets/imagenes/sombra8.webp",
         alt:"9 tonos de sombras, brillos y sombras matte pigmentados ",
-        precio: 6500
+        precio: 6500,
+        stock: 0
+      
       },
       {
         uid:"",
@@ -82,7 +98,9 @@ export class SombrasComponent {
         tono:"",
         imagen:"./assets/imagenes/sombra9.webp",
         alt:"Paleta de sombras para uso profesional,4 tonos, pigmentacion alta,",
-        precio: 8000
+        precio: 8000,
+        stock: 0
+      
       },
     ]
   }

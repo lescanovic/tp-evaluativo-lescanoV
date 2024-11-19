@@ -6,6 +6,6 @@ export interface Oferta {
     alt: string;
     precio:number;
     precio2:number,
-    
+    stock: number
 
 }

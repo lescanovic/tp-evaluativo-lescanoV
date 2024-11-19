@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { Oferta } from 'src/app/models/oferta';
 import { CrudService } from 'src/app/modules/admin/services/crud.service';
-
+import { Producto } from 'src/app/models/producto';
+import { CarritoService } from 'src/app/modules/carrito/services/carrito.service';
+import Swal from 'sweetalert2';
+import {Input, Output, EventEmitter} from '@angular/core'; 
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
@@ -9,8 +12,75 @@ import { CrudService } from 'src/app/modules/admin/services/crud.service';
 })
 export class CardsComponent {  
  
+  // Definimos colección de productos locales
+  coleccionProductos: Producto[] = [];
+
+  // Variable local para seleccionar un producto específico
+  productoSeleccionado!: Producto;
+
+  // Variable local para manejar estado de un modal
+  modalVisible: boolean = false;
+
+  //Booleano para manejar visibilidad de "ultima compra"
+  compraVisible: boolean = false;
+
+  //Directivas para comunicarse con el componente padre
+  @Input() productoReciente: string = '';
+
+  @Output() productoAgregado = new EventEmitter<Producto>(); //@Output sera definido como un nuevo evento
+
+  stock:number = 0;
+
+
+  ngOnInit(): void{
+    this.servicioCrud.obtenerProducto().subscribe(producto => {
+      this.coleccionProductos = producto;
+    })
+
+    this.servicioCarrito.iniciarCarrito();
+  }
+
+  // Función para mostrar más información de los productos
+  mostrarVer(info: Producto){
+    // Cambio estado del modal a true (ahora es visible)
+    this.modalVisible = true;
+
+    // Guardo en variable seleccionado la información de producto elegido
+    this.productoSeleccionado = info;
+  }
+
+  agregarProducto(info : Producto){
+    this.productoAgregado.emit(info);
+
+    this.compraVisible = true;
+
+    const stockDeseado = Math.trunc(this.stock);
+
+    if (stockDeseado<=0 || stockDeseado>info.stock){
+      Swal.fire({
+        title:'Error al agregar el producto',
+        text:'El stock ingresado no es valido, por favor ingresar un valor valido',
+        icon:'error'
+      })
+    } else {
+      this.servicioCarrito.crearPedido(info,stockDeseado);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
   public info: Oferta[] ;
-  constructor(public crudService: CrudService){
+  constructor(
+    public servicioCrud: CrudService,
+    public servicioCarrito: CarritoService
+  ){
   this.info = [
     
     {
@@ -20,7 +90,8 @@ export class CardsComponent {
       tono:"",
       alt:"Polvo en tono Banana iluminador",
       precio:8900,
-      precio2:7500
+      precio2:7500,
+      stock: 0
     },
     {
       uid:"",
@@ -29,7 +100,8 @@ export class CardsComponent {
       tono:"",
       alt:"Alta cobertura",
       precio:9800,
-      precio2:8000
+      precio2:8000,
+      stock:0
     },
     {
       uid:"",
@@ -38,7 +110,8 @@ export class CardsComponent {
       tono:"Tono: Nude",
       alt:"Labial cremoso hidratante con acido hialurónico en el centro",
       precio:1400,
-      precio2:10000
+      precio2:10000,
+      stock:0
     },
     {
       uid:"",
@@ -47,7 +120,8 @@ export class CardsComponent {
       tono:"Tono: Rose pink",
       alt:"Balsamo labial evita la resequedad y cura heridas",
       precio:6500,
-      precio2:4500
+      precio2:4500,
+      stock:0
     },
     {
       uid:"",
@@ -56,7 +130,8 @@ export class CardsComponent {
       tono:"Tono: Cherry",
       alt:"Balsamo labial evita la resequedad y cura heridas",
       precio:6500,
-      precio2:4500
+      precio2:4500,
+      stock:0
     },
     {
       uid:"",
@@ -65,7 +140,8 @@ export class CardsComponent {
       tono:"Tono: Red",
       alt:"Balsamo labial evita la resequedad y cura heridas",
       precio:6500,
-      precio2:4500
+      precio2:4500,
+      stock:0
     },
     {
       uid:"",
@@ -74,7 +150,8 @@ export class CardsComponent {
       tono:"",
       alt:"",
       precio:15400,
-      precio2:10000
+      precio2:10000,
+      stock:0
     },
     {
       uid:"",
@@ -83,7 +160,8 @@ export class CardsComponent {
       tono:"Negro",
       alt:"",
       precio:5000,
-      precio2:3000
+      precio2:3000,
+      stock:0
     },
     {
       uid:"",
@@ -92,7 +170,8 @@ export class CardsComponent {
       tono:"",
       alt:"10 tonos de sombras, tornasoladas y matte",
       precio:7850,
-      precio2:6350
+      precio2:6350,
+      stock:0
     },
    
   ]

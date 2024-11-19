@@ -28,7 +28,7 @@ export class TableComponent {
     tono: new FormControl ('',Validators.required),
     //imagen: new FormControl('',Validators.required), //Lo comento porque ya no sera requerido, la imagen no se subira con la direccion, sino que se subira una imagen descargada
     alt: new FormControl('', Validators.required),
-
+    stock:new FormControl(0,Validators.required),
 
   })
 
@@ -48,6 +48,8 @@ export class TableComponent {
         tono: this.producto.value.tono!,
         imagen: '', //La imagen generara su contenido desde la base de datos
         alt: this.producto.value.alt!,
+        stock: this.producto.value.stock!
+      
 
       }
       //Enviamos nombre y url
@@ -129,7 +131,8 @@ export class TableComponent {
       precio: productoSeleccionado.precio,
       tono: productoSeleccionado.tono,
       //imagen:productoSeleccionado.imagen,
-      alt: productoSeleccionado.alt
+      alt: productoSeleccionado.alt,
+      stock: this.productosSeleccionado.stock
     })
   }
 
@@ -142,6 +145,7 @@ export class TableComponent {
       tono: this.producto.value.tono!,
       imagen: this.productosSeleccionado.imagen, //Llamamos del producto seleccionado
       alt: this.producto.value.alt!,
+      stock: this.producto.value.stock!
     }
 
     //Vamos a verificar si el usuario ingresa o no una nueva imagen

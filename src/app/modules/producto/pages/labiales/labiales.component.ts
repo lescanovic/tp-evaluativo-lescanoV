@@ -16,7 +16,9 @@ export class LabialesComponent {
       tono:"Porcelain Petal",
       imagen:"./assets/imagenes/labial1.jpg",
       alt:"Gloss Hidratante",
-      precio: 9800
+      precio: 9800,
+      stock: 0
+    
     
     },
     {
@@ -25,7 +27,9 @@ export class LabialesComponent {
       tono:"346 Rouge Determin",
       imagen:"./assets/imagenes/labial2.jpg",
       alt:"Labial cremoso",
-      precio: 14000
+      precio: 14000,
+      stock: 0
+    
     
     },
   
@@ -35,7 +39,9 @@ export class LabialesComponent {
       tono:"107",
       imagen:"./assets/imagenes/labial3.jpg",
       alt:"Balsamo",
-      precio: 25000
+      precio: 25000,
+      stock: 0
+    
     
     },
     {
@@ -44,7 +50,9 @@ export class LabialesComponent {
       tono:"Latte Mocca",
       imagen:"./assets/imagenes/labial4.jpeg",
       alt:"Labial Mate con acabado luminoso",
-      precio: 15000
+      precio: 15000,
+      stock: 0
+    
     
     },
     {
@@ -53,7 +61,9 @@ export class LabialesComponent {
       tono:"Live Red",
       imagen:"./assets/imagenes/labial5.jpg",
       alt:"Labial Mate con acabado luminoso",
-      precio: 15000
+      precio: 15000,
+      stock: 0
+    
     
     },
     
@@ -63,7 +73,9 @@ export class LabialesComponent {
       tono:"Skin",
       imagen:"./assets/imagenes/labial6.jpg",
       alt:"Labial mate con acabado luminoso",
-      precio: 15000
+      precio: 15000,
+      stock: 0
+    
     
     },
     
@@ -73,7 +85,9 @@ export class LabialesComponent {
       tono:"Peach",
       imagen:"./assets/imagenes/labial7.jfif",
       alt:"Laial mate con acabado luminoso",
-      precio: 15000
+      precio: 15000,
+      stock: 0
+    
     
     },
     
@@ -84,7 +98,9 @@ export class LabialesComponent {
       tono:"Red Velvet",
       imagen:"./assets/imagenes/labial8.jpg",
       alt:"Labial creomoso hidratante",
-      precio: 4000
+      precio: 4000,
+      stock: 0
+    
     
     },
     {
@@ -94,6 +110,8 @@ export class LabialesComponent {
       imagen:"./assets/imagenes/labial9.jpg",
       alt:"Labial Mate",
       precio: 4000
+      ,
+      stock: 0
     
     },
     {
@@ -102,7 +120,9 @@ export class LabialesComponent {
       tono:"Sweet red",
       imagen:"./assets/imagenes/labial10.jpg",
       alt:"Labial mentolado cremoso",
-      precio: 5000
+      precio: 5000,
+      stock: 0
+    
     
     },
     

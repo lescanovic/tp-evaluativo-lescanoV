@@ -15,16 +15,14 @@ import { ContactoComponent } from './modules/contacto/contacto.component';
 import { SobrenosotrosComponent } from './modules/sobrenosotros/sobrenosotros.component';
 import { OfertasComponent } from './modules/ofertas/ofertas.component';
 import { FormsModule } from '@angular/forms';
-import { CarritoComponent } from './modules/carrito/carrito/carrito.component';
-import { PagarComponent } from './modules/pag/pagar/pagar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ContactoComponent,
     SobrenosotrosComponent,
     OfertasComponent,
-    CarritoComponent,
-    PagarComponent
+ 
   ],
   imports: [
     BrowserModule,

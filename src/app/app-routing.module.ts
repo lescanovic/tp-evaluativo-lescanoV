@@ -14,8 +14,6 @@ import { OfertasComponent } from './modules/ofertas/ofertas.component';
 import { ContactoComponent } from './modules/contacto/contacto.component';
 import { PerfumeriaComponent } from './modules/producto/pages/perfumeria/perfumeria.component';
 import { SombrasComponent } from './modules/producto/pages/sombras/sombras.component';
-import { CarritoComponent } from './modules/carrito/carrito/carrito.component';
-import { PagarComponent } from './modules/pag/pagar/pagar.component';
 
 
 const routes: Routes = [
@@ -33,13 +31,14 @@ const routes: Routes = [
   {path:"Sombras",component:SombrasComponent},
   {path:"Ofertas",component:OfertasComponent},
   {path:"Contacto",component:ContactoComponent},
-  {path:"carrito",component:CarritoComponent},
-  {path:"pagar",component: PagarComponent},
+
 
 
 //Rutas de carga perezosa, renderizan los modulos ()
   {path:"",loadChildren:()=>import('./modules/inicio/inicio.module').then(m=>m.InicioModule)},
-
+  {
+    path:"",loadChildren:()=>import('./modules/carrito/carrito.module').then(m=>m.CarritoModule)
+  },
   {path:"",loadChildren:()=>import('./modules/producto/producto.module').then(m=>m.ProductoModule)},
   {path:"",loadChildren:()=>import('./modules/autentificacion/autentificacion.module').then(m=>m.AutentificacionModule)},
   {path:"",loadChildren:()=>import('./modules/admin/admin.module').then(m=>m.AdminModule)}

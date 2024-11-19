@@ -1,29 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import  {MatTableModule} from '@angular/material/table'
-import { FormsModule } from '@angular/forms';
-
 import { CarritoRoutingModule } from './carrito-routing.module';
+import { PedidoComponent } from './components/pedido/pedido.component';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-
+    PedidoComponent
   ],
   imports: [
     CommonModule,
     CarritoRoutingModule,
     MatIconModule,
-    MatButtonModule,
-    MatTableModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   exports:[
-    MatTableModule,
     MatIconModule,
+    ReactiveFormsModule,
     FormsModule
   ]
 })

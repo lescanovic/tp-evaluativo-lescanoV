@@ -9,6 +9,7 @@
     <mat-icon>menu</mat-icon>
     <li class="dropdown-menu">
       <button mat-menu-item routerLink="/inicio">Inicio</button>
+      <button mat-menu-item routerLink="/admin">Admin</button>
       <button mat-menu-item routerLink="/Contacto">Contacto</button>
       <button mat-menu-item routerLink="/Sobrenosotros">Sobre Nosotros</button>
       <button mat-menu-item routerLink="/Ofertas">Ofertas</button>
@@ -40,8 +41,8 @@
 
   <!-- Loguearse -->
   <div id="loguearse">
-    <button routerLink="/carrito">
-      carrito
+    <button mat-icon-button class="example-icon favorite-icon" routerLink="/carrito" aria-label="Example icon-button with heart icon">
+      <mat-icon>shopping_cart</mat-icon>
     </button>
     <button mat-icon-button [matMenuTriggerFor]="usuario">
       <mat-icon id="icon">person</mat-icon>

@@ -11,6 +11,14 @@ public info: Oferta[];
 constructor(public crudService: CrudService){
   
 
+
+
+
+
+
+
+
+  
   this.info = [
     {
       uid:"",
@@ -19,7 +27,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"Alta cobertura",
       precio:8900,
-      precio2:7500
+      precio2:7500,
+      stock:0
     },
     {
       uid:"",
@@ -28,7 +37,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"Alta cobertura",
       precio:9800,
-      precio2:8000
+      precio2:8000,
+      stock:0
     },
     {
       uid:"",
@@ -37,7 +47,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"Alta cobertura",
       precio:1400,
-      precio2:10000
+      precio2:10000,
+      stock:0
     },
     {
       uid:"",
@@ -46,7 +57,8 @@ constructor(public crudService: CrudService){
       tono:"Rose pink",
       alt:"Balsamo labial evita la resequedad y cura heridas",
       precio:6500,
-      precio2:4500
+      precio2:4500,
+      stock:0
     },
     {
       uid:"",
@@ -55,7 +67,8 @@ constructor(public crudService: CrudService){
       tono:"Cherry",
       alt:"",
       precio:6500,
-      precio2:4500
+      precio2:4500,
+      stock:0
     },
     {
       uid:"",
@@ -64,7 +77,8 @@ constructor(public crudService: CrudService){
       tono:"Red",
       alt:"",
       precio:6500,
-      precio2:4500
+      precio2:4500,
+      stock:0
     },
     {
       uid:"",
@@ -73,7 +87,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"",
       precio:15400,
-      precio2:10000
+      precio2:10000,
+      stock:0
     },
     {
       uid:"",
@@ -82,7 +97,8 @@ constructor(public crudService: CrudService){
       tono:"Negro",
       alt:"",
       precio:5000,
-      precio2:3000
+      precio2:3000,
+      stock:0
     },
     {
       uid:"",
@@ -91,7 +107,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"10 tonos de sombras, tornasoladas y matte",
       precio:7850,
-      precio2:6350
+      precio2:6350,
+      stock:0
     },
     {
       uid:"",
@@ -100,7 +117,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"",
       precio:212,
-      precio2:43
+      precio2:43,
+      stock:0
     },{
       uid:"",
       nombre:"Base Liquida de Melu",
@@ -108,7 +126,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"",
       precio:212,
-      precio2:43
+      precio2:43,
+      stock:0
     
     },
     {
@@ -118,7 +137,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"",
       precio:8900,
-      precio2:7800
+      precio2:7800,
+      stock:0
     },
     {
       uid:"",
@@ -127,7 +147,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"",
       precio:6650,
-      precio2:3900
+      precio2:3900,
+      stock:0
     },
    
     {
@@ -137,7 +158,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"",
       precio:3000,
-      precio2:1500
+      precio2:1500,
+      stock:0
     },
     {
       uid:"",
@@ -146,7 +168,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"",
       precio:3000,
-      precio2:1500
+      precio2:1500,
+      stock:0
     },
     {
       uid:"",
@@ -155,7 +178,8 @@ constructor(public crudService: CrudService){
       tono:"",
       alt:"",
       precio:9800,
-      precio2:8000
+      precio2:8000,
+      stock:0
     },
     
     

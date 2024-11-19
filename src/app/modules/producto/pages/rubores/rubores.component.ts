@@ -16,7 +16,9 @@ constructor(public crudService: CrudService){
       tono:"Grateful",
       imagen:"./assets/imagenes/rubor.jpg",
       alt:"Rubor en crema ",
-      precio: 15000
+      precio: 15000,
+      stock: 0
+    
     
     },
     {
@@ -25,7 +27,9 @@ constructor(public crudService: CrudService){
       tono:"Peach",
       imagen:"./assets/imagenes/rubor2.jpg",
       alt:"Rubor en crema, con luminosidad ",
-      precio: 17000
+      precio: 17000,
+      stock: 0
+    
     
     },
     {
@@ -34,7 +38,9 @@ constructor(public crudService: CrudService){
       tono:"Poppy pink",
       imagen:"./assets/imagenes/rubor3.jpg",
       alt:"Rubor en crema y tinte de labios: Lip + Cheek",
-      precio: 12000
+      precio: 12000,
+      stock: 0
+    
     
     },
     {
@@ -43,7 +49,9 @@ constructor(public crudService: CrudService){
       tono:"Wine, Sweet Pink, Peach, Pink",
       imagen:"./assets/imagenes/rubor4.jpg",
       alt:"Cuatro Tonos de rubores en polvo",
-      precio: 7000
+      precio: 7000,
+      stock: 0
+    
     
     }, 
     {
@@ -52,7 +60,9 @@ constructor(public crudService: CrudService){
       tono:"Rose",
       imagen:"./assets/imagenes/rubor5.jpg",
       alt:"Rubor en polvo tonalizador",
-      precio: 4500
+      precio: 4500,
+      stock: 0
+    
     
     },    {
       uid:"",
@@ -60,7 +70,9 @@ constructor(public crudService: CrudService){
       tono:"Nude",
       imagen:"./assets/imagenes/rubor6.jpg",
       alt:"Rubor en polvo",
-      precio: 6000
+      precio: 6000,
+      stock: 0
+    
     
     },    {
       uid:"",
@@ -68,7 +80,9 @@ constructor(public crudService: CrudService){
       tono:"Sweet Peach",
       imagen:"./assets/imagenes/rubor7.jpg",
       alt:"Rubor en polvo con ilumacion",
-      precio: 5000
+      precio: 5000,
+      stock: 0
+    
     
     }, 
     

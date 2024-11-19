@@ -1,54 +1,66 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>ofertas</h1>
-      <div *ngFor="let i of info" class="contenido">
-        <mat-card class="card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>{{i.nombre}}</mat-card-title>
-            <mat-card-subtitle>{{i.tono}}</mat-card-subtitle>
-            <mat-card-subtitle>{{i.alt}}</mat-card-subtitle>
-          </mat-card-header>
-
-          <mat-card-content>
-            <img mat-card-image src="{{i.imagen}}">
-            <p><s>${{i.precio}}</s></p>
-            <p>Ahora: ${{i.precio2}}</p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button (click)="crudService.AgregarAlCarrito(i)">Comprar</button>
-          </mat-card-actions>
-        </mat-card>
-
-        <div class="modal fade" id="verMas" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">{{i.nombre}}</h1>
-              </div>
-              <div class="modal-body">
-                <img src="{{i.imagen}}" id="img-modal" alt="{{i.alt}}">
-                  <div class="mb-3" id="text-modal">
-                    {{i.tono}}
-                  </div>
-                  <div class="mb-3" >
-                    <p><s>${{i.precio}}</s></p>
-                    <p>Ahora: ${{i.precio2}}</p>
-                  </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" (click)="crudService.AgregarAlCarrito(i)" data-bs-dismiss="modal">
-                  Agregar al carrito
-                </button>
-                <button type="button" data-bs-dismiss="modal" >Cerrar</button>
-              </div>
-            </div>
+<!-- Espacio para mostrar la informacion de Input -->
+<div class="row">
+  <div class="col-lg-12" *ngIf="compraVisible">
+      <div class="col-lg-4">
+          <div class="card text-bg-info mb-3">
+              <ul class="list-group">
+                  <h3>Ultima compra:</h3>
+                  <li class="list-group-item">
+                      {{productoReciente}}
+                  </li>
+              </ul>
           </div>
-        </div>
+      </div>
+  </div>
+      
+  
+  
+  <!-- Card para mostrar TODOS los productos que el admin ingrese a la base de datos -->
+  <div class="col" *ngFor="let producto of coleccionProductos">
+      <div class="card">
+          <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.alt}}">
 
-      </div> <!--Contenido-->
-    </div> <!--Col-->
-  </div> <!--Row-->
-</div> <!--Container-->  
+          <div class="card-body">
+              <p class="card-text">{{producto.precio}}</p>
+
+              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#verMas"
+                  (click)="mostrarVer(producto)">Ver más</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- Modal para ver más información -->
+<div class="modal fade" id="verMas" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 *ngIf="modalVisible" class="modal-title" id="exampleModalLabel">{{productoSeleccionado.nombre}}</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body" *ngIf="modalVisible">
+              <img src="{{productoSeleccionado.imagen}}" alt="{{productoSeleccionado.alt}}" class="card-img-top">
+
+
+              <div  class="mb-3">
+                  {{productoSeleccionado.precio}}
+              </div>
+
+              <div class="mb-3">
+                  {{productoSeleccionado.stock}}
+              </div>
+          </div>
+
+          <div class="modal-footer">
+              <input type="number" placeholder="Cantidad deseada del producto" [(ngModel)]="stock">
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal"
+                  (click)="agregarProducto(productoSeleccionado)">Agregar</button>
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+      </div>
+  </div>
+</div>

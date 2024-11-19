@@ -17,7 +17,9 @@ export class PolvosComponent {
         tono:"",
         imagen:"./assets/imagenes/polvo2.webp",
         alt:"2 polvos, uno suelto y otro compacto con acabado luminoso",
-        precio:24245
+        precio:24245,
+        stock: 0
+      
       },
 
  {
@@ -26,7 +28,9 @@ export class PolvosComponent {
         tono:"",
         imagen:"./assets/imagenes/polvo3.jpeg",
         alt:"2 polvos traslucidos, uno suelto y otro compacto con acabado luminoso",
-        precio:30500
+        precio:30500,
+        stock: 0
+      
       },
       
       {
@@ -35,7 +39,9 @@ export class PolvosComponent {
         tono:"",
         imagen:"./assets/imagenes/polvo4.jpeg",
         alt:"polvos sueltos traslucidos con acabado mate",
-        precio:6500
+        precio:6500,
+        stock: 0
+      
       },
        
       {
@@ -44,7 +50,9 @@ export class PolvosComponent {
         tono:"",
         imagen:"./assets/imagenes/polvo5.jpg",
         alt:"polvos sultos en tono banana con acabado mate",
-        precio:6500
+        precio:6500,
+        stock: 0
+      
       },
       {
         uid:"",
@@ -52,7 +60,9 @@ export class PolvosComponent {
         tono:"",
         imagen:"./assets/imagenes/polvo6.jpg",
         alt:"polvos sueltos en tono banana con acabado mate",
-        precio:4500
+        precio:4500,
+        stock: 0
+      
       },
       {
         uid:"",
@@ -60,7 +70,9 @@ export class PolvosComponent {
         tono:"",
         imagen:"./assets/imagenes/polvo7.jpg",
         alt:"polvos sueltos traslucidos con acabado mate",
-        precio:3600
+        precio:3600,
+        stock: 0
+      
       },
       {
         uid:"",
@@ -68,7 +80,9 @@ export class PolvosComponent {
         tono:"",
         imagen:"./assets/imagenes/polvo8.jpeg",
         alt:"polvo compacto con acabado luminoso",
-        precio:5000
+        precio:5000,
+        stock: 0
+      
       },
       {
         uid:"",
@@ -76,7 +90,9 @@ export class PolvosComponent {
         tono:"",
         imagen:"./assets/imagenes/polvo9.png",
         alt:"polvo compacto con acabado luminoso",
-        precio:2500
+        precio:2500,
+        stock: 0
+      
       },
     ]
 

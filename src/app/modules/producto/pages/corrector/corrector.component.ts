@@ -16,7 +16,9 @@ export class CorrectorComponent {
         tono:"07",
         imagen:"./assets/imagenes/corrector1.jpg",
         alt:"Corrector Liquido ",
-        precio: 12000
+        precio: 12000,
+        stock: 0
+      
       
       },
     

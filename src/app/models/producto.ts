@@ -5,5 +5,6 @@ export interface Producto {
     alt: string;
     precio:number;
     nombre:string;
-
+    stock: number //manejamos el stock de productos
+    categoria: string
 }

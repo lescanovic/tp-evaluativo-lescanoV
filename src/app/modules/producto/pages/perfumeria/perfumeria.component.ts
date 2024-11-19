@@ -16,7 +16,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume1.jpg",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -24,7 +26,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume2.jpg",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -32,7 +36,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume3.jpg",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -40,7 +46,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume4.jpg",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -48,7 +56,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume5.jpg",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -56,7 +66,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume6.jpg",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -64,7 +76,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume7.webp",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -72,7 +86,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume8.webp",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
 
     {
@@ -81,7 +97,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume9.webp",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -89,7 +107,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume10.jpg",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -97,7 +117,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume11.jpg",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -105,7 +127,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume12.webp",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
 
     {
@@ -114,7 +138,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume13.jpg",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -122,7 +148,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume14.webp",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
     {
       uid:"",
@@ -130,7 +158,9 @@ constructor(public crudService: CrudService){
       tono:"",
       imagen:"./assets/imagenes/perfume15.webp",
       alt:"",
-      precio:232
+      precio:232,
+      stock: 0
+    
     },
   ]
 }
