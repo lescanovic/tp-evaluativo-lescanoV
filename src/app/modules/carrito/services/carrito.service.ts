@@ -22,7 +22,9 @@ export class CarritoService {
       precio:0,
       imagen:'',
       alt:'',
-      stock:0
+      stock:0,
+      categoria: '',
+      descripcion: ''
     },
     cantidad:0,
     total:0

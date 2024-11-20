@@ -7,4 +7,5 @@ export interface Producto {
     nombre:string;
     stock: number //manejamos el stock de productos
     categoria: string
+    descripcion: string
 }

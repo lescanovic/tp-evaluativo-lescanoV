@@ -7,11 +7,5 @@ import { CrudService } from 'src/app/modules/admin/services/crud.service';
   styleUrls: ['./iluminador.component.css']
 })
 export class IluminadorComponent {
-  public info : Producto [];
-  constructor(public crudService: CrudService){
-    this.info = [
-     
-    
-    ]
-  }
+
 }

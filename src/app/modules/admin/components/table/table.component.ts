@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
-import { FormControl, FormGroup,Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CrudService } from '../../services/crud.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-table',
@@ -25,10 +26,12 @@ export class TableComponent {
   producto = new FormGroup({
     nombre: new FormControl('', Validators.required),
     precio: new FormControl(0, Validators.required),
-    tono: new FormControl ('',Validators.required),
-    //imagen: new FormControl('',Validators.required), //Lo comento porque ya no sera requerido, la imagen no se subira con la direccion, sino que se subira una imagen descargada
+    tono: new FormControl('', Validators.required),
+   // imagen: new FormControl('',Validators.required), //Lo comento porque ya no sera requerido, la imagen no se subira con la direccion, sino que se subira una imagen descargada
     alt: new FormControl('', Validators.required),
-    stock:new FormControl(0,Validators.required),
+    stock: new FormControl(0, Validators.required),
+    descripcion: new FormControl('', Validators.required),
+    categoria: new FormControl('', Validators.required)
 
   })
 
@@ -48,29 +51,42 @@ export class TableComponent {
         tono: this.producto.value.tono!,
         imagen: '', //La imagen generara su contenido desde la base de datos
         alt: this.producto.value.alt!,
-        stock: this.producto.value.stock!
-      
+        stock: this.producto.value.stock!,
+        categoria: this.producto.value.categoria!,
+        descripcion: this.producto.value.descripcion!
+
 
       }
       //Enviamos nombre y url
       await this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
-        .then(resp => {
-          //Encapsulamos respuesta y enviamos la informacion recibida
-          this.servicioCrud.obtenerUrlImagen(resp)
-            .then(url => {
-              //Metodo crearProducto recibe datos del formulario y la URl creada
-              this.servicioCrud.crearProducto(nuevoProducto, url)
-                .then(producto => {
-                  alert("Ha agregado un nuevo producto con exito!")
-                  //Resetea el formulario y las casillas quedan vacias
-                  this.producto.reset();
-                })
+      .then(url => {
 
-                .catch(err => {
-                  alert("Ha ocurrido un error al cargar el producto");
-                });
+        //Ahora metodo crearProducto recibe datos del formnulario y URL creada
+        this.servicioCrud.crearProducto(nuevoProducto, url)
+          .then(producto => {
+
+            Swal.fire({
+              title: "¡Bien Hecho!",
+              text: "¡Ha ingresado un nuevo producto con exito!",
+              icon: "success"
             })
-        })
+
+
+            //resetea el formulario y las casillas quedan vacias
+            this.producto.reset()
+          })
+          .catch(error => {
+
+            Swal.fire({
+              title: "Oh no",
+              text: "Ha ocurrido un error al agregar un nuevo producto:\n" + error,
+              icon: "error"
+            })
+
+
+            this.producto.reset()
+          })
+      })
 
 
 
@@ -132,7 +148,9 @@ export class TableComponent {
       tono: productoSeleccionado.tono,
       //imagen:productoSeleccionado.imagen,
       alt: productoSeleccionado.alt,
-      stock: this.productosSeleccionado.stock
+      stock: this.productosSeleccionado.stock,
+      categoria: this.productosSeleccionado.categoria,
+      descripcion: this.productosSeleccionado.descripcion
     })
   }
 
@@ -145,7 +163,9 @@ export class TableComponent {
       tono: this.producto.value.tono!,
       imagen: this.productosSeleccionado.imagen, //Llamamos del producto seleccionado
       alt: this.producto.value.alt!,
-      stock: this.producto.value.stock!
+      stock: this.producto.value.stock!,
+      categoria: this.producto.value.categoria!,
+      descripcion: this.producto.value.descripcion!
     }
 
     //Vamos a verificar si el usuario ingresa o no una nueva imagen
@@ -153,7 +173,7 @@ export class TableComponent {
       //Llamamos del servicio Crud al metodo Subir imagen
       this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
         .then(resp => {
-          this.servicioCrud.obtenerUrlImagen(resp) 
+          this.servicioCrud.obtenerUrlImagen(resp)
             .then(url => {
               datos.imagen = url; //Actualizamos URL de la imagen en los datos del formulario
 
@@ -168,28 +188,42 @@ export class TableComponent {
             })
         })
     }
-    else{
+    else {
       /*Actualizamos el formulario con los datos recibidos del usuario pero sin modificar la imagen ya existente
         en firestore y en storage */
       this.actualizarProducto(datos);
     }
 
-   
+
   }
 
+  actualizarProducto(datos: Producto) {
+    //Enviamos el metodo del id del producto seleccionado y los datos actualizados
+    this.servicioCrud.modificarProducto(this.productosSeleccionado.uid, datos)
+      .then(producto => {
 
-  actualizarProducto(datos:Producto) //Recibe los datos
-  {
-     //Enviamos al metodo el id del producto seleccionado y los datos actualizados 
-     this.servicioCrud.modificarProducto(this.productosSeleccionado.uid,datos)
-     .then(producto => {
-       alert("El producto se ha modificado con exito!")
-     })
-     .catch(error => {
-       alert("Hubo un problema :c: \n" + error)
+        Swal.fire({
+          title: "¡Buen trabajo!",
+          text: "¡El producto se a modificado con exito!",
+          icon: "success"
+        })
 
-     })
 
+        this.producto.reset()
+      })
+      .catch(error => {
+
+
+
+        Swal.fire({
+          title: "¡Oh no!",
+          text: "¡Hubo un error al modificar el producto:\n" + error,
+          icon: "success"
+        })
+
+
+        this.producto.reset()
+      })
   }
 
 }

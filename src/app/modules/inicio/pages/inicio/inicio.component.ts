@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Oferta } from 'src/app/models/oferta';
+
 import { CrudService } from 'src/app/modules/admin/services/crud.service';
 
 import { Producto } from 'src/app/models/producto';

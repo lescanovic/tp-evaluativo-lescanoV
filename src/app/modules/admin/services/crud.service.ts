@@ -102,20 +102,22 @@ export class CrudService {
   crearProducto(producto: Producto, url: string) {
     return new Promise(async (resolve, reject) => {
       try {
-        //Creamos numero identificativo para el producto en la base de datos
+        //creamos numero identificativo poara el producto en la base de datos
         const uid = this.database.createId()
-        //asignamos ID creado al atributo idProducto a la interfaz producto
-        producto.uid = uid;
 
-        //Asignamos URL recibida del parametro al atributo "imagen" de interfaz de producto
-        producto.imagen = url;
+        //asignamos ID creado al atributo idProducto de la interfaz Producto
+        producto.uid = uid
 
+        //Asignammos URL recibida del parametro al atributo "imagen" de interfaz Producto
+        producto.imagen = url
 
         const resultado = await this.productosCollection.doc(uid).set(producto)
         resolve(resultado)
+
       } catch (error) {
-        reject(error);
+        reject(error)
       }
+
     })
   }
   //Obtener
@@ -200,7 +202,7 @@ export class CrudService {
       let referenciaImagen = ref(this.storage, ruta + '/' + nombre)
 
       //Le asignamos a la respuesta la informacion de la imagen subida
-      this.respuesta = await uploadString(referenciaImagen, nombre, 'data_url')
+      this.respuesta = await uploadString(referenciaImagen, imagen, 'data_url')
         .then(res => {
           return res;
         })

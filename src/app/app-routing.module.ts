@@ -10,7 +10,7 @@ import { RuboresComponent } from './modules/producto/pages/rubores/rubores.compo
 import { PolvosComponent } from './modules/producto/pages/polvos/polvos.component';
 import { CorrectorComponent } from './modules/producto/pages/corrector/corrector.component';
 import { SobrenosotrosComponent } from './modules/sobrenosotros/sobrenosotros.component';
-import { OfertasComponent } from './modules/ofertas/ofertas.component';
+
 import { ContactoComponent } from './modules/contacto/contacto.component';
 import { PerfumeriaComponent } from './modules/producto/pages/perfumeria/perfumeria.component';
 import { SombrasComponent } from './modules/producto/pages/sombras/sombras.component';
@@ -29,7 +29,6 @@ const routes: Routes = [
   {path:"Correctores",component:CorrectorComponent},
   {path:"Sobrenosotros",component:SobrenosotrosComponent},
   {path:"Sombras",component:SombrasComponent},
-  {path:"Ofertas",component:OfertasComponent},
   {path:"Contacto",component:ContactoComponent},
 
 

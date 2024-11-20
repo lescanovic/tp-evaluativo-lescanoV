@@ -13,15 +13,14 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { SharedModule } from './modules/shared/components/shared/shared.module';
 import { ContactoComponent } from './modules/contacto/contacto.component';
 import { SobrenosotrosComponent } from './modules/sobrenosotros/sobrenosotros.component';
-import { OfertasComponent } from './modules/ofertas/ofertas.component';
+
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactoComponent,
-    SobrenosotrosComponent,
-    OfertasComponent,
+    SobrenosotrosComponent
  
   ],
   imports: [
