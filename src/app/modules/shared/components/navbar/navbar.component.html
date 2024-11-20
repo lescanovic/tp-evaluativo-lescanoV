@@ -50,7 +50,7 @@
     <mat-menu #usuario="matMenu">
       <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
       <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar Sesion</button>
-      <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar Sesion</button>
+      <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Volver Al inicio</button>
     </mat-menu>
   </div>
 

@@ -19,6 +19,26 @@ import { getDownloadURL, getStorage, ref, UploadResult, uploadString, deleteObje
   providedIn: 'root'
 })
 export class CrudService {
+
+
+
+
+
+  //Definimos coleccion para los productos de la web
+  private productosCollection: AngularFirestoreCollection<Producto>
+
+  private respuesta!: UploadResult
+
+  //se le agrega un signo de exclamacion para que pueda recbir valores vacios en un comienzo
+
+
+  //Inicializar servicio de storage
+  private storage = getStorage();
+
+  constructor(private database: AngularFirestore) {
+    this.productosCollection = database.collection('producto')
+  }
+
   coleccionCarrito: any[] = []
   cantidadItemCarrito: number = 0;
   totalCarrito: number = 0;
@@ -71,30 +91,6 @@ export class CrudService {
     }
     this.cantidadItemCarrito = this.coleccionCarrito.length
     this.calcularTotal()
-  }
-
-
-
-
-
-
-
-
-
-
-  //Definimos coleccion para los productos de la web
-  private productosCollection: AngularFirestoreCollection<Producto>
-
-  private respuesta!: UploadResult
-
-  //se le agrega un signo de exclamacion para que pueda recbir valores vacios en un comienzo
-
-
-  //Inicializar servicio de storage
-  private storage = getStorage();
-
-  constructor(private database: AngularFirestore) {
-    this.productosCollection = database.collection('producto')
   }
 
   //Crear productos

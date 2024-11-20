@@ -27,7 +27,7 @@ export class TableComponent {
     nombre: new FormControl('', Validators.required),
     precio: new FormControl(0, Validators.required),
     tono: new FormControl('', Validators.required),
-   // imagen: new FormControl('',Validators.required), //Lo comento porque ya no sera requerido, la imagen no se subira con la direccion, sino que se subira una imagen descargada
+    // imagen: new FormControl('',Validators.required), //Lo comento porque ya no sera requerido, la imagen no se subira con la direccion, sino que se subira una imagen descargada
     alt: new FormControl('', Validators.required),
     stock: new FormControl(0, Validators.required),
     descripcion: new FormControl('', Validators.required),
@@ -57,47 +57,45 @@ export class TableComponent {
 
 
       }
-      //Enviamos nombre y url
+      // Enviamos nombre y url de la imagen; definimos carpeta de imágenes como "productos"
       await this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
-      .then(url => {
+        .then(res => {
+          this.servicioCrud.obtenerUrlImagen(res)
+            .then(url => {
 
-        //Ahora metodo crearProducto recibe datos del formnulario y URL creada
-        this.servicioCrud.crearProducto(nuevoProducto, url)
-          .then(producto => {
+              //Ahora metodo crearProducto recibe datos del formnulario y URL creada
+              this.servicioCrud.crearProducto(nuevoProducto, url)
+                .then(producto => {
 
-            Swal.fire({
-              title: "¡Bien Hecho!",
-              text: "¡Ha ingresado un nuevo producto con exito!",
-              icon: "success"
+                  Swal.fire({
+                    title: "¡Bien Hecho!",
+                    text: "¡Ha ingresado un nuevo producto con exito!",
+                    icon: "success"
+                  })
+                  //resetea el formulario y las casillas quedan vacias
+                  this.producto.reset()
+                })
+                .catch(error => {
+
+                  Swal.fire({
+                    title: "Oh no",
+                    text: "Ha ocurrido un error al agregar un nuevo producto:\n" + error,
+                    icon: "error"
+                  })
+                  this.producto.reset()
+                })
             })
-
-
-            //resetea el formulario y las casillas quedan vacias
-            this.producto.reset()
-          })
-          .catch(error => {
-
-            Swal.fire({
-              title: "Oh no",
-              text: "Ha ocurrido un error al agregar un nuevo producto:\n" + error,
-              icon: "error"
-            })
-
-
-            this.producto.reset()
-          })
-      })
-
-
-
+        })
 
     };
   }
 
   cargarImagen(event: any) {
-
+    // Variable para obtener el archivo subido desde el input del HTML
     let archivo = event.target.files[0];
+    // Variable para crear un nuevo objeto de tipo "archivo" o "file" y leerlo
     let reader = new FileReader()
+
     if (archivo != undefined) {
 
       /*Llamamos a metodo readAsDataURL para leer toda la informacion recibida
@@ -171,7 +169,7 @@ export class TableComponent {
     //Vamos a verificar si el usuario ingresa o no una nueva imagen
     if (this.imagen) {
       //Llamamos del servicio Crud al metodo Subir imagen
-      this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
+      this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "producto")
         .then(resp => {
           this.servicioCrud.obtenerUrlImagen(resp)
             .then(url => {

@@ -17,14 +17,14 @@ export class CarritoService {
     idPedido:'',
     producto: {
       uid:'',
-      tono:'',
       nombre:'',
       precio:0,
+      descripcion:'',
+      categoria:'',
       imagen:'',
+      tono:'',
       alt:'',
-      stock:0,
-      categoria: '',
-      descripcion: ''
+      stock:0
     },
     cantidad:0,
     total:0
