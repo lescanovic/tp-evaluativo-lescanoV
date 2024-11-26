@@ -33,6 +33,9 @@ const routes: Routes = [
 
 
 
+  /*Una carga perezosa se activa únicamente cuando el usuario navega a 
+  la sección correspondiente, como "inicio" o "admin". Hasta ese momento,
+   el módulo relacionado no se carga en la memoria del navegador, */
 //Rutas de carga perezosa, renderizan los modulos ()
   {path:"",loadChildren:()=>import('./modules/inicio/inicio.module').then(m=>m.InicioModule)},
   {
